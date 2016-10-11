@@ -36,6 +36,8 @@ adder8 adder_0(
 	.out(adder2reg)
 );
 
+LEDdecoder kmd(system_clock,count);
+
 reg8 reg_0 (
 	.datain(adder2reg),
 	.dataout(reg2adder),
@@ -43,6 +45,6 @@ reg8 reg_0 (
 	.reset(system_reset)
 );
 
-assign count=adder2reg;
+//assign count=adder2reg;
 
 endmodule
