@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\kmd17\Documents\GitHub\FPGACODE\system.ncd
+OUTFILE=C:\Users\kmd17\Documents\GitHub\FPGACODE\system.bit
+FAMILY=Spartan3
+PART=xc3s200-4ft256
+WORKINGDIR=C:\Users\kmd17\Documents\GitHub\FPGACODE
+LICENSE=WebPack
+USER_INFO=211250770_0_0_433
