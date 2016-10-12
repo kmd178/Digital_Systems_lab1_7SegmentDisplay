@@ -20,31 +20,57 @@
 //////////////////////////////////////////////////////////////////////////////////
 module tb;
 
-reg give_clk,give_reset;
-wire [8:0] take_count;
-
+reg reset,clk;
+reg [3:0] give_character;
+wire a,b,c,d,e,f,g,dp;
 
 system sys0(
-	.system_clock(give_clk),
-	.system_reset(give_reset),
-	.count(take_count)
-
+	reset,
+	clk,
+	an3,
+	an2,
+	an1,
+	an0,
+	a,
+	b,
+	c,
+	d,
+	e,
+	f,
+	g,
+	dp
 );
 
 initial begin
-
-	give_clk = 0;
-	give_reset = 1;
-				
+	clk=0;
+	reset = 0;
+	reset = 1;
+	
+	give_character= 0;
+			#20 give_character= 1;
+			#20 give_character= 2;
+			#20 give_character= 3;	
+			#20 give_character= 4;	
+			#20 give_character= 5;
+			#20 give_character= 6;
+			#20 give_character= 7;	
+			#20 give_character= 8;	
+			#20 give_character= 9;
+			#20 give_character= 10;
+			#20 give_character= 11;	
+			#20 give_character= 12;	
+			#20 give_character= 13;
+			#20 give_character= 14;
+			#20 give_character= 15;
 
 	#100;
 					
-	give_reset = 0;
+	reset = 0;
 					
 	#10000 $finish;	
 
 end
 	
-always #10 give_clk = ~ give_clk;
+always #10 clk = ~ clk;
 
 endmodule

@@ -1,16 +1,16 @@
-NET "count[0]" LOC = K12;
-NET "count[1]" LOC = P14;
-NET "count[2]" LOC = L12;
-NET "count[3]" LOC = N14;
-NET "count[4]" LOC = P13;
-NET "count[5]" LOC = N12;
-NET "count[6]" LOC = P12;
-NET "system_clock" LOC = T9;
-NET "system_reset" LOC = L14;
+#NET "count[0]" LOC = K12;
+#NET "count[1]" LOC = P14;
+#NET "count[2]" LOC = L12;
+#NET "count[3]" LOC = N14;
+#NET "count[4]" LOC = P13;
+#NET "count[5]" LOC = N12;
+#NET "count[6]" LOC = P12;
+NET "clk" LOC = T9;
+#\NET "reset" LOC = L14;
 
-NET "system_clock" TNM_NET = "system_clock";
-TIMESPEC TS_clk = PERIOD "system_clock" 20 ns HIGH 50 %;
+NET "clk" TNM_NET = "clk";
+TIMESPEC TS_clk = PERIOD "clk" 20 ns HIGH 50 %;
 
 # PlanAhead Generated physical constraints 
 
-NET "count[7]" LOC = P11;
+#NET "count[7]" LOC = P11;

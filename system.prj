@@ -1,3 +1,2 @@
-verilog work "reg8.v"
-verilog work "adder8.v"
+verilog work "LEDdecoder.v"
 verilog work "system.v"

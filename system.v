@@ -19,32 +19,27 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module system(
-	system_clock,
-	system_reset,
-	count
+	input reset,
+	input clk,
+	output an3,
+	output an2,
+	output an1,
+	output an0,
+	output a,
+	output b,
+	output c,
+	output d,
+	output e,
+	output f,
+	output g,
+	output dp
 );
+wire [6:0] Led;
+wire [3:0] char;
 
-input system_clock, system_reset;
-output [8:0] count;
+assign {a,b,c,d,e,f,g}=Led;
+assign char=4'h4;
 
-wire [7:0] reg2adder;
-wire [8:0] adder2reg;
-
-adder8 adder_0(
-	.in0(reg2adder),
-	.in1(8'b00000001),
-	.out(adder2reg)
-);
-
-LEDdecoder kmd(system_clock,count);
-
-reg8 reg_0 (
-	.datain(adder2reg),
-	.dataout(reg2adder),
-	.clock(system_clock),
-	.reset(system_reset)
-);
-
-//assign count=adder2reg;
+LEDdecoder kmd(char,Led);
 
 endmodule

@@ -16,6 +16,7 @@ Environment Variable      Effect
 NONE                      No environment variables were set
 --------------------------------------------------------------------------------
 
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
 INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
 INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
    option. All paths that are not constrained will be reported in the 
@@ -33,404 +34,54 @@ INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and
    SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
    Error.
 
-================================================================================
-Timing constraint: TS_clk = PERIOD TIMEGRP "system_clock" 20 ns HIGH 50%;
-For more information, see Period Analysis in the Timing Closure User Guide (UG612).
-
- 36 paths analyzed, 23 endpoints analyzed, 0 failing endpoints
- 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is   4.209ns.
---------------------------------------------------------------------------------
-
-Paths for end point reg_0/dataout_6 (SLICE_X32Y0.G2), 4 paths
---------------------------------------------------------------------------------
-Slack (setup path):     15.791ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               reg_0/dataout_2 (FF)
-  Destination:          reg_0/dataout_6 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      4.209ns (Levels of Logic = 2)
-  Clock Path Skew:      0.000ns
-  Source Clock:         system_clock_BUFGP rising at 0.000ns
-  Destination Clock:    system_clock_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.000ns
-
-  Maximum Data Path: reg_0/dataout_2 to reg_0/dataout_6
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X37Y2.YQ       Tcko                  0.720   reg_0/dataout<3>
-                                                       reg_0/dataout_2
-    SLICE_X36Y2.G2       net (fanout=3)        0.707   reg_0/dataout<2>
-    SLICE_X36Y2.Y        Tilo                  0.608   reg_0/dataout<4>
-                                                       adder_0/Madd_out_addsub0000_cy<3>11
-    SLICE_X32Y0.G2       net (fanout=5)        1.484   adder_0/Madd_out_addsub0000_cy<3>
-    SLICE_X32Y0.CLK      Tgck                  0.690   reg_0/dataout<6>
-                                                       adder_0/Madd_out_addsub0000_xor<6>11
-                                                       reg_0/dataout_6
-    -------------------------------------------------  ---------------------------
-    Total                                      4.209ns (2.018ns logic, 2.191ns route)
-                                                       (47.9% logic, 52.1% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     15.884ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               reg_0/dataout_1 (FF)
-  Destination:          reg_0/dataout_6 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      4.116ns (Levels of Logic = 2)
-  Clock Path Skew:      0.000ns
-  Source Clock:         system_clock_BUFGP rising at 0.000ns
-  Destination Clock:    system_clock_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.000ns
-
-  Maximum Data Path: reg_0/dataout_1 to reg_0/dataout_6
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X36Y3.YQ       Tcko                  0.720   reg_0/dataout<0>
-                                                       reg_0/dataout_1
-    SLICE_X36Y2.G1       net (fanout=4)        0.614   reg_0/dataout<1>
-    SLICE_X36Y2.Y        Tilo                  0.608   reg_0/dataout<4>
-                                                       adder_0/Madd_out_addsub0000_cy<3>11
-    SLICE_X32Y0.G2       net (fanout=5)        1.484   adder_0/Madd_out_addsub0000_cy<3>
-    SLICE_X32Y0.CLK      Tgck                  0.690   reg_0/dataout<6>
-                                                       adder_0/Madd_out_addsub0000_xor<6>11
-                                                       reg_0/dataout_6
-    -------------------------------------------------  ---------------------------
-    Total                                      4.116ns (2.018ns logic, 2.098ns route)
-                                                       (49.0% logic, 51.0% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     15.944ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               reg_0/dataout_0 (FF)
-  Destination:          reg_0/dataout_6 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      4.056ns (Levels of Logic = 2)
-  Clock Path Skew:      0.000ns
-  Source Clock:         system_clock_BUFGP rising at 0.000ns
-  Destination Clock:    system_clock_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.000ns
-
-  Maximum Data Path: reg_0/dataout_0 to reg_0/dataout_6
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X36Y3.XQ       Tcko                  0.720   reg_0/dataout<0>
-                                                       reg_0/dataout_0
-    SLICE_X36Y2.G3       net (fanout=6)        0.554   reg_0/dataout<0>
-    SLICE_X36Y2.Y        Tilo                  0.608   reg_0/dataout<4>
-                                                       adder_0/Madd_out_addsub0000_cy<3>11
-    SLICE_X32Y0.G2       net (fanout=5)        1.484   adder_0/Madd_out_addsub0000_cy<3>
-    SLICE_X32Y0.CLK      Tgck                  0.690   reg_0/dataout<6>
-                                                       adder_0/Madd_out_addsub0000_xor<6>11
-                                                       reg_0/dataout_6
-    -------------------------------------------------  ---------------------------
-    Total                                      4.056ns (2.018ns logic, 2.038ns route)
-                                                       (49.8% logic, 50.2% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point reg_0/dataout_7 (SLICE_X33Y1.F3), 4 paths
---------------------------------------------------------------------------------
-Slack (setup path):     16.108ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               reg_0/dataout_2 (FF)
-  Destination:          reg_0/dataout_7 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      3.892ns (Levels of Logic = 2)
-  Clock Path Skew:      0.000ns
-  Source Clock:         system_clock_BUFGP rising at 0.000ns
-  Destination Clock:    system_clock_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.000ns
-
-  Maximum Data Path: reg_0/dataout_2 to reg_0/dataout_7
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X37Y2.YQ       Tcko                  0.720   reg_0/dataout<3>
-                                                       reg_0/dataout_2
-    SLICE_X36Y2.G2       net (fanout=3)        0.707   reg_0/dataout<2>
-    SLICE_X36Y2.Y        Tilo                  0.608   reg_0/dataout<4>
-                                                       adder_0/Madd_out_addsub0000_cy<3>11
-    SLICE_X33Y1.F3       net (fanout=5)        1.224   adder_0/Madd_out_addsub0000_cy<3>
-    SLICE_X33Y1.CLK      Tfck                  0.633   reg_0/dataout<7>
-                                                       adder_0/Madd_out_addsub0000_xor<7>11
-                                                       reg_0/dataout_7
-    -------------------------------------------------  ---------------------------
-    Total                                      3.892ns (1.961ns logic, 1.931ns route)
-                                                       (50.4% logic, 49.6% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     16.201ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               reg_0/dataout_1 (FF)
-  Destination:          reg_0/dataout_7 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      3.799ns (Levels of Logic = 2)
-  Clock Path Skew:      0.000ns
-  Source Clock:         system_clock_BUFGP rising at 0.000ns
-  Destination Clock:    system_clock_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.000ns
-
-  Maximum Data Path: reg_0/dataout_1 to reg_0/dataout_7
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X36Y3.YQ       Tcko                  0.720   reg_0/dataout<0>
-                                                       reg_0/dataout_1
-    SLICE_X36Y2.G1       net (fanout=4)        0.614   reg_0/dataout<1>
-    SLICE_X36Y2.Y        Tilo                  0.608   reg_0/dataout<4>
-                                                       adder_0/Madd_out_addsub0000_cy<3>11
-    SLICE_X33Y1.F3       net (fanout=5)        1.224   adder_0/Madd_out_addsub0000_cy<3>
-    SLICE_X33Y1.CLK      Tfck                  0.633   reg_0/dataout<7>
-                                                       adder_0/Madd_out_addsub0000_xor<7>11
-                                                       reg_0/dataout_7
-    -------------------------------------------------  ---------------------------
-    Total                                      3.799ns (1.961ns logic, 1.838ns route)
-                                                       (51.6% logic, 48.4% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     16.261ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               reg_0/dataout_0 (FF)
-  Destination:          reg_0/dataout_7 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      3.739ns (Levels of Logic = 2)
-  Clock Path Skew:      0.000ns
-  Source Clock:         system_clock_BUFGP rising at 0.000ns
-  Destination Clock:    system_clock_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.000ns
-
-  Maximum Data Path: reg_0/dataout_0 to reg_0/dataout_7
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X36Y3.XQ       Tcko                  0.720   reg_0/dataout<0>
-                                                       reg_0/dataout_0
-    SLICE_X36Y2.G3       net (fanout=6)        0.554   reg_0/dataout<0>
-    SLICE_X36Y2.Y        Tilo                  0.608   reg_0/dataout<4>
-                                                       adder_0/Madd_out_addsub0000_cy<3>11
-    SLICE_X33Y1.F3       net (fanout=5)        1.224   adder_0/Madd_out_addsub0000_cy<3>
-    SLICE_X33Y1.CLK      Tfck                  0.633   reg_0/dataout<7>
-                                                       adder_0/Madd_out_addsub0000_xor<7>11
-                                                       reg_0/dataout_7
-    -------------------------------------------------  ---------------------------
-    Total                                      3.739ns (1.961ns logic, 1.778ns route)
-                                                       (52.4% logic, 47.6% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point reg_0/dataout_7 (SLICE_X33Y1.F4), 2 paths
---------------------------------------------------------------------------------
-Slack (setup path):     16.417ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               reg_0/dataout_4 (FF)
-  Destination:          reg_0/dataout_7 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      3.583ns (Levels of Logic = 2)
-  Clock Path Skew:      0.000ns
-  Source Clock:         system_clock_BUFGP rising at 0.000ns
-  Destination Clock:    system_clock_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.000ns
-
-  Maximum Data Path: reg_0/dataout_4 to reg_0/dataout_7
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X36Y2.XQ       Tcko                  0.720   reg_0/dataout<4>
-                                                       reg_0/dataout_4
-    SLICE_X33Y1.G2       net (fanout=5)        1.664   reg_0/dataout<4>
-    SLICE_X33Y1.Y        Tilo                  0.551   reg_0/dataout<7>
-                                                       adder_0/Madd_out_addsub0000_cy<6>11_SW0
-    SLICE_X33Y1.F4       net (fanout=1)        0.015   adder_0/Madd_out_addsub0000_cy<6>11_SW0/O
-    SLICE_X33Y1.CLK      Tfck                  0.633   reg_0/dataout<7>
-                                                       adder_0/Madd_out_addsub0000_xor<7>11
-                                                       reg_0/dataout_7
-    -------------------------------------------------  ---------------------------
-    Total                                      3.583ns (1.904ns logic, 1.679ns route)
-                                                       (53.1% logic, 46.9% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     17.353ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               reg_0/dataout_5 (FF)
-  Destination:          reg_0/dataout_7 (FF)
-  Requirement:          20.000ns
-  Data Path Delay:      2.647ns (Levels of Logic = 2)
-  Clock Path Skew:      0.000ns
-  Source Clock:         system_clock_BUFGP rising at 0.000ns
-  Destination Clock:    system_clock_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.000ns
-
-  Maximum Data Path: reg_0/dataout_5 to reg_0/dataout_7
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X35Y1.YQ       Tcko                  0.720   reg_0/dataout<5>
-                                                       reg_0/dataout_5
-    SLICE_X33Y1.G1       net (fanout=4)        0.728   reg_0/dataout<5>
-    SLICE_X33Y1.Y        Tilo                  0.551   reg_0/dataout<7>
-                                                       adder_0/Madd_out_addsub0000_cy<6>11_SW0
-    SLICE_X33Y1.F4       net (fanout=1)        0.015   adder_0/Madd_out_addsub0000_cy<6>11_SW0/O
-    SLICE_X33Y1.CLK      Tfck                  0.633   reg_0/dataout<7>
-                                                       adder_0/Madd_out_addsub0000_xor<7>11
-                                                       reg_0/dataout_7
-    -------------------------------------------------  ---------------------------
-    Total                                      2.647ns (1.904ns logic, 0.743ns route)
-                                                       (71.9% logic, 28.1% route)
-
---------------------------------------------------------------------------------
-
-Hold Paths: TS_clk = PERIOD TIMEGRP "system_clock" 20 ns HIGH 50%;
---------------------------------------------------------------------------------
-
-Paths for end point reg_0/dataout_3 (SLICE_X37Y2.F4), 1 path
---------------------------------------------------------------------------------
-Slack (hold path):      0.935ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               reg_0/dataout_1 (FF)
-  Destination:          reg_0/dataout_3 (FF)
-  Requirement:          0.000ns
-  Data Path Delay:      0.935ns (Levels of Logic = 1)
-  Clock Path Skew:      0.000ns
-  Source Clock:         system_clock_BUFGP rising at 20.000ns
-  Destination Clock:    system_clock_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.000ns
-
-  Minimum Data Path: reg_0/dataout_1 to reg_0/dataout_3
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X36Y3.YQ       Tcko                  0.576   reg_0/dataout<0>
-                                                       reg_0/dataout_1
-    SLICE_X37Y2.F4       net (fanout=4)        0.298   reg_0/dataout<1>
-    SLICE_X37Y2.CLK      Tckf        (-Th)    -0.061   reg_0/dataout<3>
-                                                       adder_0/Madd_out_addsub0000_xor<3>11
-                                                       reg_0/dataout_3
-    -------------------------------------------------  ---------------------------
-    Total                                      0.935ns (0.637ns logic, 0.298ns route)
-                                                       (68.1% logic, 31.9% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point reg_0/dataout_2 (SLICE_X37Y2.G4), 1 path
---------------------------------------------------------------------------------
-Slack (hold path):      0.955ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               reg_0/dataout_1 (FF)
-  Destination:          reg_0/dataout_2 (FF)
-  Requirement:          0.000ns
-  Data Path Delay:      0.955ns (Levels of Logic = 1)
-  Clock Path Skew:      0.000ns
-  Source Clock:         system_clock_BUFGP rising at 20.000ns
-  Destination Clock:    system_clock_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.000ns
-
-  Minimum Data Path: reg_0/dataout_1 to reg_0/dataout_2
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X36Y3.YQ       Tcko                  0.576   reg_0/dataout<0>
-                                                       reg_0/dataout_1
-    SLICE_X37Y2.G4       net (fanout=4)        0.318   reg_0/dataout<1>
-    SLICE_X37Y2.CLK      Tckg        (-Th)    -0.061   reg_0/dataout<3>
-                                                       adder_0/Madd_out_addsub0000_xor<2>11
-                                                       reg_0/dataout_2
-    -------------------------------------------------  ---------------------------
-    Total                                      0.955ns (0.637ns logic, 0.318ns route)
-                                                       (66.7% logic, 33.3% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point reg_0/dataout_3 (SLICE_X37Y2.F3), 1 path
---------------------------------------------------------------------------------
-Slack (hold path):      0.995ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               reg_0/dataout_2 (FF)
-  Destination:          reg_0/dataout_3 (FF)
-  Requirement:          0.000ns
-  Data Path Delay:      0.995ns (Levels of Logic = 1)
-  Clock Path Skew:      0.000ns
-  Source Clock:         system_clock_BUFGP rising at 20.000ns
-  Destination Clock:    system_clock_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.000ns
-
-  Minimum Data Path: reg_0/dataout_2 to reg_0/dataout_3
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X37Y2.YQ       Tcko                  0.576   reg_0/dataout<3>
-                                                       reg_0/dataout_2
-    SLICE_X37Y2.F3       net (fanout=3)        0.358   reg_0/dataout<2>
-    SLICE_X37Y2.CLK      Tckf        (-Th)    -0.061   reg_0/dataout<3>
-                                                       adder_0/Madd_out_addsub0000_xor<3>11
-                                                       reg_0/dataout_3
-    -------------------------------------------------  ---------------------------
-    Total                                      0.995ns (0.637ns logic, 0.358ns route)
-                                                       (64.0% logic, 36.0% route)
-
---------------------------------------------------------------------------------
-
-Component Switching Limit Checks: TS_clk = PERIOD TIMEGRP "system_clock" 20 ns HIGH 50%;
---------------------------------------------------------------------------------
-Slack: 18.428ns (period - (min low pulse limit / (low pulse / period)))
-  Period: 20.000ns
-  Low pulse: 10.000ns
-  Low pulse limit: 0.786ns (Tcl)
-  Physical resource: reg_0/dataout<4>/CLK
-  Logical resource: reg_0/dataout_4/CK
-  Location pin: SLICE_X36Y2.CLK
-  Clock network: system_clock_BUFGP
---------------------------------------------------------------------------------
-Slack: 18.428ns (period - (min high pulse limit / (high pulse / period)))
-  Period: 20.000ns
-  High pulse: 10.000ns
-  High pulse limit: 0.786ns (Tch)
-  Physical resource: reg_0/dataout<4>/CLK
-  Logical resource: reg_0/dataout_4/CK
-  Location pin: SLICE_X36Y2.CLK
-  Clock network: system_clock_BUFGP
---------------------------------------------------------------------------------
-Slack: 18.428ns (period - (min low pulse limit / (low pulse / period)))
-  Period: 20.000ns
-  Low pulse: 10.000ns
-  Low pulse limit: 0.786ns (Tcl)
-  Physical resource: reg_0/dataout<6>/CLK
-  Logical resource: reg_0/dataout_6/CK
-  Location pin: SLICE_X32Y0.CLK
-  Clock network: system_clock_BUFGP
---------------------------------------------------------------------------------
-
-
-All constraints were met.
 
 
 Data Sheet report:
 -----------------
 All values displayed in nanoseconds (ns)
 
-Clock to Setup on destination clock system_clock
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-system_clock   |    4.209|         |         |         |
----------------+---------+---------+---------+---------+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+char<0>        |Led<0>         |    8.547|
+char<0>        |Led<1>         |    8.409|
+char<0>        |Led<2>         |    8.263|
+char<0>        |Led<3>         |    8.091|
+char<0>        |Led<5>         |    8.086|
+char<0>        |Led<6>         |    8.334|
+char<1>        |Led<0>         |    8.543|
+char<1>        |Led<1>         |    8.496|
+char<1>        |Led<2>         |    7.907|
+char<1>        |Led<3>         |    8.199|
+char<1>        |Led<4>         |    7.907|
+char<1>        |Led<5>         |    7.851|
+char<1>        |Led<6>         |    8.518|
+char<2>        |Led<0>         |    8.380|
+char<2>        |Led<1>         |    8.257|
+char<2>        |Led<2>         |    7.713|
+char<2>        |Led<3>         |    7.668|
+char<2>        |Led<4>         |    8.208|
+char<2>        |Led<5>         |    7.735|
+char<2>        |Led<6>         |    7.981|
+char<3>        |Led<0>         |    8.322|
+char<3>        |Led<1>         |    8.269|
+char<3>        |Led<2>         |    7.949|
+char<3>        |Led<3>         |    8.217|
+char<3>        |Led<4>         |    8.023|
+char<3>        |Led<5>         |    7.851|
+char<3>        |Led<6>         |    8.445|
+---------------+---------------+---------+
 
 
-Timing summary:
----------------
-
-Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
-
-Constraints cover 36 paths, 0 nets, and 36 connections
-
-Design statistics:
-   Minimum period:   4.209ns{1}   (Maximum frequency: 237.586MHz)
-
-
-------------------------------------Footnotes-----------------------------------
-1)  The minimum period statistic assumes all single cycle delays.
-
-Analysis completed Tue Oct 11 23:56:08 2016 
+Analysis completed Wed Oct 12 15:39:13 2016 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 157 MB
+Peak Memory Usage: 158 MB
 
 
 
