@@ -1,23 +1,4 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date:    23:16:26 10/07/2012 
-// Design Name: 
-// Module Name:    system 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
-//
-// Dependencies: 
-//
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
-//
-//////////////////////////////////////////////////////////////////////////////////
 module FourDigitLEDdriver(
 	input reset,
 	input clk,
@@ -35,12 +16,12 @@ module FourDigitLEDdriver(
 	output dp,
 	output CLKDV
 );
-wire [6:0] Led;
+wire [7:0] Led;
 wire [3:0] char;
+wire clk,reset,CLKDV;
+wire an0,an1,an2,an3;
 
-assign {a,b,c,d,e,f,g}=Led;
-assign char=4'h4;     //JUST TEST , TO DELETE////
-
+assign {a,b,c,d,e,f,g,dp}=Led;
 
    DCM #(
       .SIM_MODE("SAFE"),  // Simulation: "SAFE" vs. "FAST", see "Synthesis and Simulation Design Guide" for details
@@ -81,7 +62,7 @@ assign char=4'h4;     //JUST TEST , TO DELETE////
       .RST(RST)        // DCM asynchronous reset input
    );
 
-
+ledDataFeeder kmd1(clk,reset,char,an0,an1,an2,an3);
 LEDdecoder kmd(char,Led);
 
 endmodule
