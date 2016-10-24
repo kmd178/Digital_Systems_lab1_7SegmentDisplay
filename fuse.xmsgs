@@ -5,34 +5,13 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="error" file="HDLCompiler" num="806" delta="unknown" >"C:/Users/kmd17/Documents/GitHub/FPGACODE_LAB1_7SegmentDisplay/DCM.v" Line 29: Syntax error near &quot;<arg fmt="%s" index="1">=</arg>&quot;.
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:/Users/kmd17/Documents/GitHub/FPGACODE_LAB1_7SegmentDisplay/system.v" Line 45: Port <arg fmt="%s" index="1">DSSEN</arg> is not connected to this instance
 </msg>
 
-<msg type="error" file="HDLCompiler" num="806" delta="unknown" >"C:/Users/kmd17/Documents/GitHub/FPGACODE_LAB1_7SegmentDisplay/DCM.v" Line 32: Syntax error near &quot;<arg fmt="%s" index="1">else</arg>&quot;.
+<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"C:/Users/kmd17/Documents/GitHub/FPGACODE_LAB1_7SegmentDisplay/system.v" Line 75: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">STATUS</arg>&gt;. Formal port size is <arg fmt="%d" index="2">8</arg>-bit while actual signal size is <arg fmt="%d" index="1">1</arg>-bit.
 </msg>
 
-<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"C:/Users/kmd17/Documents/GitHub/FPGACODE_LAB1_7SegmentDisplay/DCM.v" Line 27: &lt;<arg fmt="%s" index="1">clock</arg>&gt; is not declared.
-</msg>
-
-<msg type="error" file="HDLCompiler" num="1660" delta="unknown" >"C:/Users/kmd17/Documents/GitHub/FPGACODE_LAB1_7SegmentDisplay/DCM.v" Line 30: Procedural assignment to a non-register <arg fmt="%s" index="1">cnt</arg> is not permitted, left-hand side should be reg/integer/time/genvar
-</msg>
-
-<msg type="error" file="HDLCompiler" num="1660" delta="unknown" >"C:/Users/kmd17/Documents/GitHub/FPGACODE_LAB1_7SegmentDisplay/DCM.v" Line 30: Procedural assignment to a non-register <arg fmt="%s" index="1">cnt</arg> is not permitted, left-hand side should be reg/integer/time/genvar
-</msg>
-
-<msg type="error" file="HDLCompiler" num="1660" delta="unknown" >"C:/Users/kmd17/Documents/GitHub/FPGACODE_LAB1_7SegmentDisplay/DCM.v" Line 31: Procedural assignment to a non-register <arg fmt="%s" index="1">CLKDV</arg> is not permitted, left-hand side should be reg/integer/time/genvar
-</msg>
-
-<msg type="error" file="HDLCompiler" num="1660" delta="unknown" >"C:/Users/kmd17/Documents/GitHub/FPGACODE_LAB1_7SegmentDisplay/DCM.v" Line 31: Procedural assignment to a non-register <arg fmt="%s" index="1">CLKDV</arg> is not permitted, left-hand side should be reg/integer/time/genvar
-</msg>
-
-<msg type="error" file="HDLCompiler" num="1660" delta="unknown" >"C:/Users/kmd17/Documents/GitHub/FPGACODE_LAB1_7SegmentDisplay/DCM.v" Line 33: Procedural assignment to a non-register <arg fmt="%s" index="1">cnt</arg> is not permitted, left-hand side should be reg/integer/time/genvar
-</msg>
-
-<msg type="error" file="HDLCompiler" num="1660" delta="unknown" >"C:/Users/kmd17/Documents/GitHub/FPGACODE_LAB1_7SegmentDisplay/DCM.v" Line 33: Procedural assignment to a non-register <arg fmt="%s" index="1">cnt</arg> is not permitted, left-hand side should be reg/integer/time/genvar
-</msg>
-
-<msg type="error" file="HDLCompiler" num="598" delta="unknown" >"C:/Users/kmd17/Documents/GitHub/FPGACODE_LAB1_7SegmentDisplay/DCM.v" Line 21: Module &lt;<arg fmt="%s" index="1">DCM</arg>&gt; ignored due to previous errors.
+<msg type="warning" file="Simulator" num="0" delta="unknown" >Unable to copy libPortabilityNOSH.dll to the simulation executable directory: <arg fmt="%s" index="1">boost::filesystem::copy_file: The system cannot find the path specified, &quot;isim\tb_isim_beh.exe.sim\libPortability.dll&quot;</arg>.
 </msg>
 
 </messages>
