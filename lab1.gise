@@ -23,6 +23,7 @@
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
     <file xil_pn:fileType="FILE_LSO" xil_pn:name=".lso"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="DCM_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="FourDigitLEDdriver.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="FourDigitLEDdriver.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="FourDigitLEDdriver.xst"/>
@@ -104,21 +105,29 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1476795785" xil_pn:in_ck="8247345274140824480" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1476795785">
+    <transform xil_pn:end_ts="1476796715" xil_pn:in_ck="8247345274140824480" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1476796715">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputRemoved"/>
-      <status xil_pn:value="OutputRemoved"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="DCM.v"/>
+      <outfile xil_pn:name="LEDdecoder.v"/>
+      <outfile xil_pn:name="adder8.v"/>
+      <outfile xil_pn:name="reg8.v"/>
+      <outfile xil_pn:name="system.v"/>
+      <outfile xil_pn:name="tb.v"/>
     </transform>
     <transform xil_pn:end_ts="1476795234" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-7128511773193751507" xil_pn:start_ts="1476795234">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
     </transform>
     <transform xil_pn:end_ts="1476795234" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="1315538588008459749" xil_pn:start_ts="1476795234">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
     </transform>
     <transform xil_pn:end_ts="1476791804" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="6378287197950522357" xil_pn:start_ts="1476791804">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -130,6 +139,8 @@
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputRemoved"/>
     </transform>
