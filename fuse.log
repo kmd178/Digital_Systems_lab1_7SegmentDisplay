@@ -1,24 +1,27 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o C:/Users/kmd17/Documents/GitHub/FPGACODE/tb_isim_beh.exe -prj C:/Users/kmd17/Documents/GitHub/FPGACODE/tb_beh.prj work.tb work.glbl 
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "C:/Users/kmd17/Documents/GitHub/FPGACODE/tb_isim_beh.exe" -prj "C:/Users/kmd17/Documents/GitHub/FPGACODE/tb_beh.prj" "work.tb" "work.glbl" 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
 Analyzing Verilog file "C:/Users/kmd17/Documents/GitHub/FPGACODE/LEDdecoder.v" into library work
 Analyzing Verilog file "C:/Users/kmd17/Documents/GitHub/FPGACODE/ledDataFeeder.v" into library work
+Analyzing Verilog file "C:/Users/kmd17/Documents/GitHub/FPGACODE/anti-bounce.v" into library work
+WARNING:HDLCompiler:751 - "C:/Users/kmd17/Documents/GitHub/FPGACODE/anti-bounce.v" Line 11: Redeclaration of ansi port button is not allowed
 Analyzing Verilog file "C:/Users/kmd17/Documents/GitHub/FPGACODE/system.v" into library work
-WARNING:HDLCompiler:751 - "C:/Users/kmd17/Documents/GitHub/FPGACODE/system.v" Line 21: Redeclaration of ansi port clk is not allowed
-WARNING:HDLCompiler:751 - "C:/Users/kmd17/Documents/GitHub/FPGACODE/system.v" Line 22: Redeclaration of ansi port an0 is not allowed
+WARNING:HDLCompiler:751 - "C:/Users/kmd17/Documents/GitHub/FPGACODE/system.v" Line 23: Redeclaration of ansi port clk is not allowed
+WARNING:HDLCompiler:751 - "C:/Users/kmd17/Documents/GitHub/FPGACODE/system.v" Line 24: Redeclaration of ansi port an0 is not allowed
 Analyzing Verilog file "C:/Users/kmd17/Documents/GitHub/FPGACODE/tb.v" into library work
 Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
-WARNING:HDLCompiler:1016 - "C:/Users/kmd17/Documents/GitHub/FPGACODE/system.v" Line 26: Port DSSEN is not connected to this instance
-WARNING:HDLCompiler:189 - "C:/Users/kmd17/Documents/GitHub/FPGACODE/system.v" Line 56: Size mismatch in connection of port <STATUS>. Formal port size is 8-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1016 - "C:/Users/kmd17/Documents/GitHub/FPGACODE/system.v" Line 28: Port DSSEN is not connected to this instance
+WARNING:HDLCompiler:189 - "C:/Users/kmd17/Documents/GitHub/FPGACODE/system.v" Line 58: Size mismatch in connection of port <STATUS>. Formal port size is 8-bit while actual signal size is 1-bit.
 Completed static elaboration
 Compiling module dcm_clock_divide_by_2
 Compiling module dcm_maximum_period_check(clock_n...
 Compiling module dcm_maximum_period_check(clock_n...
 Compiling module dcm_clock_lost
 Compiling module DCM(CLKDV_DIVIDE=16.0,CLKIN_PERI...
+Compiling module anti_bounce
 Compiling module ledDataFeeder
 Compiling module LEDdecoder
 Compiling module FourDigitLEDdriver
@@ -27,7 +30,7 @@ Compiling module glbl
 Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
 WARNING:Simulator - Unable to copy libPortabilityNOSH.dll to the simulation executable directory: boost::filesystem::copy_file: The system cannot find the path specified, "isim\tb_isim_beh.exe.sim\libPortability.dll".
-Compiled 10 Verilog Units
+Compiled 11 Verilog Units
 Built simulation executable C:/Users/kmd17/Documents/GitHub/FPGACODE/tb_isim_beh.exe
-Fuse Memory Usage: 32020 KB
-Fuse CPU Usage: 421 ms
+Fuse Memory Usage: 31796 KB
+Fuse CPU Usage: 374 ms

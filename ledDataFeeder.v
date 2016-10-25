@@ -10,19 +10,21 @@ module ledDataFeeder(
 reg [3:0] SystemCounter;
 
 always @(posedge clk,reset)
-	if (reset) begin
-		an0 <= 1;
-		an1 <= 1;
-		an2 <= 1;
-		an3 <= 1;
-	  SystemCounter <= 4'b0 ;
+	begin
+		if (reset) begin
+			an0 <= 1;
+			an1 <= 1;
+			an2 <= 1;
+			an3 <= 1;
+		  SystemCounter <= 4'b0 ;
+		end
+		else begin
+		  SystemCounter <= SystemCounter + 4'b0001;
+		end
 	end
-	else begin
-	  SystemCounter <= SystemCounter + 4'b0001;
-end
 
 always @(*)
-case(SystemCounter)
+case(SystemCounter) 
   4'h0: begin 
 			loadCharLED = 4'b0100; 
 //				MemoryCounter= MemoryCounter+4'b1 ; //0
@@ -36,7 +38,7 @@ case(SystemCounter)
 		  end
   //4'h5: LED = 7'b0100100; //5
   4'h6: an1 = 0; //6
-  4'h7: an1 = 1; //7
+  4'h7: an1 = 1; //7 
   4'h8: begin 
 			loadCharLED = 4'b0010; 
 //			MemoryCounter= MemoryCounter+4'b1 ; //8

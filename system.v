@@ -14,7 +14,9 @@ module FourDigitLEDdriver(
 	output f,
 	output g,
 	output dp,
-	output CLKDV
+	output CLKDV,
+	output stabilizedButton,
+	input button
 );
 wire [7:0] Led;
 wire [3:0] char;
@@ -62,6 +64,8 @@ assign {a,b,c,d,e,f,g,dp}=Led;
       .RST(RST)        // DCM asynchronous reset input
    );
 
+//anti_bounce kmd2(clk, 1'b0 , reset, stabilizedRESET)
+anti_bounce kmd2(clk, reset , button, stabilizedButton);
 ledDataFeeder kmd1(clk,reset,char,an0,an1,an2,an3);
 LEDdecoder kmd(char,Led);
 

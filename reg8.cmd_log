@@ -1,0 +1,1 @@
+vhdtdtfi -lib work C:/Users/kmd17/Documents/GitHub/FPGACODE/reg8.v -lang verilog -prj lab1 -o reg8.spl -module reg8 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 

@@ -5,10 +5,22 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="751" delta="unknown" >"C:/Users/kmd17/Documents/GitHub/FPGACODE/system.v" Line 21: Redeclaration of ansi port <arg fmt="%s" index="1">clk</arg> is not allowed
+<msg type="warning" file="HDLCompiler" num="751" delta="unknown" >"C:/Users/kmd17/Documents/GitHub/FPGACODE/anti-bounce.v" Line 11: Redeclaration of ansi port <arg fmt="%s" index="1">button</arg> is not allowed
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="751" delta="unknown" >"C:/Users/kmd17/Documents/GitHub/FPGACODE/system.v" Line 22: Redeclaration of ansi port <arg fmt="%s" index="1">an0</arg> is not allowed
+<msg type="warning" file="HDLCompiler" num="751" delta="unknown" >"C:/Users/kmd17/Documents/GitHub/FPGACODE/system.v" Line 23: Redeclaration of ansi port <arg fmt="%s" index="1">clk</arg> is not allowed
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="751" delta="unknown" >"C:/Users/kmd17/Documents/GitHub/FPGACODE/system.v" Line 24: Redeclaration of ansi port <arg fmt="%s" index="1">an0</arg> is not allowed
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:/Users/kmd17/Documents/GitHub/FPGACODE/system.v" Line 28: Port <arg fmt="%s" index="1">DSSEN</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"C:/Users/kmd17/Documents/GitHub/FPGACODE/system.v" Line 58: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">STATUS</arg>&gt;. Formal port size is <arg fmt="%d" index="2">8</arg>-bit while actual signal size is <arg fmt="%d" index="1">1</arg>-bit.
+</msg>
+
+<msg type="warning" file="Simulator" num="0" delta="unknown" >Unable to copy libPortabilityNOSH.dll to the simulation executable directory: <arg fmt="%s" index="1">boost::filesystem::copy_file: The system cannot find the path specified, &quot;isim\tb_isim_beh.exe.sim\libPortability.dll&quot;</arg>.
 </msg>
 
 </messages>
