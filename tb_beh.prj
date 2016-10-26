@@ -1,4 +1,5 @@
 verilog work "LEDdecoder.v"
+verilog work "ledDataFeeder.v"
 verilog work "ant-bounce_reset.v"
 verilog work "system.v"
 verilog work "tb.v"

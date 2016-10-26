@@ -318,9 +318,9 @@ LAB1:    return;
 }
 
 
-extern void work_m_00000000001152855589_0834505369_init()
+extern void work_m_00000000003953416142_0834505369_init()
 {
 	static char *pe[] = {(void *)Cont_26_0};
-	xsi_register_didat("work_m_00000000001152855589_0834505369", "isim/tb_isim_beh.exe.sim/work/m_00000000001152855589_0834505369.didat");
+	xsi_register_didat("work_m_00000000003953416142_0834505369", "isim/tb_isim_beh.exe.sim/work/m_00000000003953416142_0834505369.didat");
 	xsi_register_executes(pe);
 }

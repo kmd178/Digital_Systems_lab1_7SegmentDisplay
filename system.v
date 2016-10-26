@@ -2,6 +2,7 @@
 module FourDigitLEDdriver(
 	input reset,
 	input clk,
+	input button,
 	output an3,
 	output an2,
 	output an1,
@@ -15,8 +16,7 @@ module FourDigitLEDdriver(
 	output g,
 	output dp,
 	output CLKDV,
-	output stabilizedRESET,
-	input button
+	output stabilizedRESET
 );
 wire [7:0] Led;
 wire [3:0] char;
@@ -65,8 +65,8 @@ assign {a,b,c,d,e,f,g,dp}=Led;
    );
 
 anti_bounce_reset kmd2(clk, reset, stabilizedRESET);
-//anti_bounce_reset kmd3(clk, reset , button, stabilizedButton);
-ledDataFeeder kmd1(clk,stabilizedRESET,char,an0,an1,an2,an3);
+anti_bounce_reset kmd3(clk, reset , button, stabilizedButton);
+ledDataFeeder kmd1(clk,stabilizedRESET,stabilizedButton,char,an0,an1,an2,an3);
 LEDdecoder kmd(char,Led);
 
 endmodule

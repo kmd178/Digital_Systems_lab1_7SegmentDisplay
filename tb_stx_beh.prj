@@ -1,4 +1,5 @@
 verilog isim_temp "LEDdecoder.v"
+verilog isim_temp "ledDataFeeder.v"
 verilog isim_temp "ant-bounce_reset.v"
 verilog isim_temp "system.v"
 verilog isim_temp "tb.v"

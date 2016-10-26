@@ -3,25 +3,24 @@
 module ledDataFeeder(
 	input clk,
 	input reset,
+	input button,
 	output reg [3:0] loadCharLED,
 	output reg an0,an1,an2,an3
 );
 
-reg [3:0] SystemCounter;
-reg [3:0] message [0:7];
-reg [2:0] MemoryCounter;
+reg [3:0] SystemCounter=4'b0;
+reg [3:0] message [7:0];
+reg [2:0] MemoryCounter=3'b0;
 
-assign message[0]=1'h1;   //1
-assign message[1]=1'h4;   //4
-assign message[2]=1'h3;   //3
-assign message[3]=1'h5;   //5
-assign message[4]=1'ha;   //a
-assign message[5]=1'hb;   //b
-assign message[6]=1'hc;   //C
-assign message[7]=1'hd;   //d
-
-
-
+//causes my compiler to crash!!!!!
+//assign message[1'h0]=1'h1;   //1
+//assign message[1'h1]=1'h4;   //4
+//assign message[1'h2]=1'h3;   //3
+//assign message[1'h3]=1'h5;   //5
+//assign message[1'h4]=1'ha;   //a
+//assign message[1'h5]=1'hb;   //b
+//assign message[1'h6]=1'hc;   //C
+//assign message[1'h7]=1'hd;   //d
 
 always @(posedge clk,reset)
 	begin
@@ -31,14 +30,14 @@ always @(posedge clk,reset)
 			an2 <= 1;
 			an3 <= 1;
 		  SystemCounter <= 4'b0 ;
-		  MemoryCounter <= 4'b0 ;
+		  MemoryCounter <= 3'b0 ;
 		end
 		else begin
 		  SystemCounter <= SystemCounter + 4'b0001;
 		end
 	end
 
-always @(*)
+always @(stabilizedButton)
 case(SystemCounter) 
   1'h0: begin 
 			loadCharLED = message[MemoryCounter]; 
