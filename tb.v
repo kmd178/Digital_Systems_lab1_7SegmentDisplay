@@ -31,24 +31,24 @@ initial begin
 	button=0;
 	#100;
 					
-	#1000reset = 1;
-	#1000reset=0;
-	#10000 reset=1;
-	#10000 reset=0;
-	#100 reset=1;
-	#100 reset=0;
-	#100 reset=1;
-	#100 reset=0;
-	#100 reset=1;
-	#100 reset=0;
-	#100 reset=1;
-	#100 reset=0;
-	#10000 reset=1;
-	#100 reset=0;
-	#100 reset=1;
-	#100 reset=0;
-	#100 reset=1;
-	#100 reset=1;
+	#100 reset = 1;
+	#1000 button=0;
+	#10000 button=1;
+	#10000 button=0;
+	#100 button=1;
+	#100 button=0;
+	#100 button=1;
+	#100 button=0;
+	#100 button=1;
+	#100 button=0;
+	#100 button=1;
+	#100 button=0;
+	#10000 button=1;
+	#100 button=0;
+	#100 button=1;
+	#100 button=0;
+	#100 button=1;
+	#100 button=1;
 	
 	#10000 $finish;	
 

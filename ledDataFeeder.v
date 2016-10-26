@@ -22,6 +22,12 @@ reg [2:0] MemoryCounter=3'b0;
 //assign message[1'h6]=1'hc;   //C
 //assign message[1'h7]=1'hd;   //d
 
+
+reg [4:0] signal_every_second; //Depending on the FPGA system used. Normally for 50mhz clock divided by 16 on the dcm(period=(2e-8)/16) and for a 1340ms distance between posedge we need 2^22cycles
+always @(posedge clk)	
+	signal_every_second<=signal_every_second+ 1'b1;
+
+
 always @(posedge clk,reset)
 	begin
 		if (reset) begin
@@ -31,13 +37,16 @@ always @(posedge clk,reset)
 			an3 <= 1;
 		  SystemCounter <= 4'b0 ;
 		  MemoryCounter <= 3'b0 ;
+		  signal_every_second <= 1'b0;
 		end
 		else begin
 		  SystemCounter <= SystemCounter + 4'b0001;
 		end
 	end
+	
+//always @(stabilizedButton)
 
-always @(stabilizedButton)
+always @(posedge signal_every_second)
 case(SystemCounter) 
   1'h0: begin 
 			loadCharLED = message[MemoryCounter]; 

@@ -7,7 +7,6 @@ module anti_bounce_reset(
 );
 		reg [5:0] clk_count; //Depending on the FPGA system used. Normally for 50mhz clock (period=2e-8) and for a 20ms stabilizing time 20bits gives 2^20cycles that give 0.020ms
 		wire check; //ClockDividing using AND: When clk_hits 15 clock periods CHECK will give me a posedge
-		wire button;
 		reg reset_initialize=1'b1;
 		reg saved_button_state;
 		reg [2:0] current_state;
