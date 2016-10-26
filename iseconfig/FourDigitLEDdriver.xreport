@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2016-10-25T20:53:30</DateModified>
+  <DateModified>2016-10-27T00:32:52</DateModified>
   <ModuleName>FourDigitLEDdriver</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/kmd17/Documents/GitHub/FPGACODE/iseconfig/FourDigitLEDdriver.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/kmd17/Documents/GitHub/FPGACODE\</ImplementationReportsDirectory>
-  <DateInitialized>2016-10-24T14:24:58</DateInitialized>
+  <SavedFilePath>C:/Users/kmd17/Documents/GitHub/FPGACODE_LAB1_7SegmentDisplay/iseconfig/FourDigitLEDdriver.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/kmd17/Documents/GitHub/FPGACODE_LAB1_7SegmentDisplay\</ImplementationReportsDirectory>
+  <DateInitialized>2016-10-26T12:48:42</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
  <body>

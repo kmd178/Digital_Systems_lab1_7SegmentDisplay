@@ -3,11 +3,11 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pn" timeStamp="Wed Oct 12 16:26:46 2016">
+<application name="pn" timeStamp="Wed Oct 26 17:54:08 2016">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="B55C3ECA5AD64184B29BC2482C9A9159" type="project"/>
-<property name="ProjectIteration" value="2" type="project"/>
-<property name="ProjectFile" value="C:/Users/kmd17/Documents/GitHub/FPGACODE_LAB1_7SegmentDisplay/lab1.xise" type="project"/>
+<property name="ProjectIteration" value="9" type="project"/>
+<property name="ProjectFile" value="C:/Users/kmd17/Desktop/FPGACODE_LAB1_7SegmentDisplay-FPGACODE_LAB1_PART_D/lab1.xise" type="project"/>
 <property name="ProjectCreationTimestamp" value="2016-10-11T23:13:22" type="project"/>
 </section>
 <section name="Project Statistics" visible="true">
@@ -18,7 +18,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_LastAppliedStrategy" value="Xilinx Default (unlocked)" type="design"/>
 <property name="PROP_ManualCompileOrderImp" value="false" type="design"/>
 <property name="PROP_PropSpecInProjFile" value="Store all values" type="design"/>
-<property name="PROP_SelectedInstanceHierarchicalPath" value="/tb/sys0" type="process"/>
+<property name="PROP_SelectedInstanceHierarchicalPath" value="/tb" type="process"/>
 <property name="PROP_Simulator" value="ISim (VHDL/Verilog)" type="design"/>
 <property name="PROP_SynthTopFile" value="changed" type="process"/>
 <property name="PROP_Top_Level_Module_Type" value="HDL" type="design"/>
@@ -26,10 +26,11 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_UserConstraintEditorPreference" value="Text Editor" type="process"/>
 <property name="PROP_intProjectCreationTimestamp" value="2016-10-11T23:13:22" type="design"/>
 <property name="PROP_intWbtProjectID" value="B55C3ECA5AD64184B29BC2482C9A9159" type="design"/>
-<property name="PROP_intWbtProjectIteration" value="2" type="process"/>
+<property name="PROP_intWbtProjectIteration" value="9" type="process"/>
 <property name="PROP_intWorkingDirLocWRTProjDir" value="Same" type="design"/>
 <property name="PROP_intWorkingDirUsed" value="No" type="design"/>
-<property name="PROP_selectedSimRootSourceNode_behav" value="work.system" type="process"/>
+<property name="PROP_selectedSimRootSourceNode_behav" value="work.tb" type="process"/>
+<property name="PROP_xilxBitgStart_Clk" value="JTAG Clock" type="process"/>
 <property name="PROP_xilxBitgStart_IntDone" value="true" type="process"/>
 <property name="PROP_AutoTop" value="true" type="design"/>
 <property name="PROP_DevFamily" value="Spartan3" type="design"/>
@@ -40,7 +41,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_DevSpeed" value="-4" type="design"/>
 <property name="PROP_PreferredLanguage" value="Verilog" type="design"/>
 <property name="FILE_UCF" value="1" type="source"/>
-<property name="FILE_VERILOG" value="5" type="source"/>
+<property name="FILE_VERILOG" value="8" type="source"/>
 </section>
 </application>
 </document>

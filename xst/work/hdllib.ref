@@ -1,5 +1,5 @@
-MO FourDigitLEDdriver NULL system.v vlg6A/_four_digit_l_e_ddriver.bin 1476791779
-MO LEDdecoder NULL LEDdecoder.v vlg17/_l_e_ddecoder.bin 1476791779
-MO adder8 NULL adder8.v vlg5C/adder8.bin 1476219350
-MO system NULL system.v vlg19/system.bin 1476278811
-MO reg8 NULL reg8.v vlg42/reg8.bin 1476219350
+MO FourDigitLEDdriver NULL system.v vlg6A/_four_digit_l_e_ddriver.bin 1477493621
+MO ledDataFeeder NULL ledDataFeeder.v vlg16/led_data_feeder.bin 1477493620
+MO LEDdecoder NULL LEDdecoder.v vlg17/_l_e_ddecoder.bin 1477493620
+MO anti_bounce_reset NULL ant-bounce_reset.v vlg49/anti__bounce__reset.bin 1477493621
+MO anti_bounce NULL anti-bounce.v vlg7B/anti__bounce.bin 1477493620

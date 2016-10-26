@@ -1,0 +1,47 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Wed Oct 26 17:54:05 2016
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "e" LOCATE = SITE "R16" LEVEL 1;
+COMP "f" LOCATE = SITE "F13" LEVEL 1;
+COMP "g" LOCATE = SITE "N16" LEVEL 1;
+COMP "dp" LOCATE = SITE "P16" LEVEL 1;
+COMP "clk" LOCATE = SITE "T9" LEVEL 1;
+COMP "an0" LOCATE = SITE "D14" LEVEL 1;
+COMP "an1" LOCATE = SITE "G14" LEVEL 1;
+COMP "an2" LOCATE = SITE "F14" LEVEL 1;
+COMP "an3" LOCATE = SITE "E13" LEVEL 1;
+COMP "BTN2" LOCATE = SITE "L13" LEVEL 1;
+COMP "reset" LOCATE = SITE "L14" LEVEL 1;
+COMP "a" LOCATE = SITE "E14" LEVEL 1;
+COMP "b" LOCATE = SITE "G13" LEVEL 1;
+COMP "c" LOCATE = SITE "N15" LEVEL 1;
+COMP "d" LOCATE = SITE "P15" LEVEL 1;
+NET "clk_IBUFG1" BEL "clk_IBUFG_BUFG.GCLKMUX" USELOCALCONNECT;
+PIN DCM_inst_pins<3> = BEL "DCM_inst" PINNAME CLKIN;
+TIMEGRP clk = PIN "DCM_inst_pins<3>" BEL "kmd2/clk_count_19" BEL
+        "kmd2/clk_count_18" BEL "kmd2/clk_count_17" BEL "kmd2/clk_count_16"
+        BEL "kmd2/clk_count_15" BEL "kmd2/clk_count_14" BEL
+        "kmd2/clk_count_13" BEL "kmd2/clk_count_12" BEL "kmd2/clk_count_11"
+        BEL "kmd2/clk_count_10" BEL "kmd2/clk_count_9" BEL "kmd2/clk_count_8"
+        BEL "kmd2/clk_count_7" BEL "kmd2/clk_count_6" BEL "kmd2/clk_count_5"
+        BEL "kmd2/clk_count_4" BEL "kmd2/clk_count_3" BEL "kmd2/clk_count_2"
+        BEL "kmd2/clk_count_1" BEL "kmd2/clk_count_0" BEL "kmd3/clk_count_19"
+        BEL "kmd3/clk_count_18" BEL "kmd3/clk_count_17" BEL
+        "kmd3/clk_count_16" BEL "kmd3/clk_count_15" BEL "kmd3/clk_count_14"
+        BEL "kmd3/clk_count_13" BEL "kmd3/clk_count_12" BEL
+        "kmd3/clk_count_11" BEL "kmd3/clk_count_10" BEL "kmd3/clk_count_9" BEL
+        "kmd3/clk_count_8" BEL "kmd3/clk_count_7" BEL "kmd3/clk_count_6" BEL
+        "kmd3/clk_count_5" BEL "kmd3/clk_count_4" BEL "kmd3/clk_count_3" BEL
+        "kmd3/clk_count_2" BEL "kmd3/clk_count_1" BEL "kmd3/clk_count_0" BEL
+        "clk_IBUFG_BUFG.GCLKMUX" BEL "clk_IBUFG_BUFG";
+TIMEGRP CLKDV_OBUF = BEL "kmd1/SystemCounter_3" BEL "kmd1/SystemCounter_2" BEL
+        "kmd1/SystemCounter_1" BEL "kmd1/SystemCounter_0" BEL "kmd1/an3" BEL
+        "kmd1/an2" BEL "kmd1/an1" BEL "kmd1/an0" BEL "kmd1/loadCharLED_3" BEL
+        "kmd1/loadCharLED_2" BEL "kmd1/loadCharLED_1" BEL "kmd1/loadCharLED_0"
+        BEL "CLKDV";
+TS_clk = PERIOD TIMEGRP "clk" 20 ns HIGH 50%;
+TS_CLKDV_OBUF = PERIOD TIMEGRP "CLKDV_OBUF" TS_clk * 16 HIGH 50%;
+SCHEMATIC END;
+

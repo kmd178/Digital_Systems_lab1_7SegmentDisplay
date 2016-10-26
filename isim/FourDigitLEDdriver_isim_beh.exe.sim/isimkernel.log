@@ -1,0 +1,29 @@
+Command line:
+   FourDigitLEDdriver_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  51161
+
+Wed Oct 26 13:05:39 2016
+
+
+ Elaboration Time: 0.5 sec
+
+ Current Memory Usage: 1500.39 Meg
+
+ Total Signals          : 96
+ Total Nets             : 88
+ Total Signal Drivers   : 57
+ Total Blocks           : 12
+ Total Primitive Blocks : 10
+ Total Processes        : 139
+ Total Traceable Variables  : 205
+ Total Scalar Nets and Variables : 3463
+Total Line Count : 898
+
+ Total Simulation Time: 0.734375 sec
+
+ Current Memory Usage: 1028.5 Meg
+
+Wed Oct 26 13:06:40 2016
+

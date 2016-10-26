@@ -26,13 +26,15 @@ FourDigitLEDdriver sys0(
 	.stabilizedButton(stabilizedButton)
 );
 
+
+
 initial begin
 	clk=0;
 	reset = 1;
 	BTN2=0;
-	#100;
+	#1000;
 					
-	#100 reset = 0;
+	#10000 reset = 0;
 	#1000 BTN2=0;
 	#10000 BTN2=1;
 	#10000 BTN2=0;
@@ -51,7 +53,7 @@ initial begin
 	#100 BTN2=1;
 	#100 BTN2=1;
 	
-	#10000 $finish;	
+	#1000000 $finish;	
 
 end
 	

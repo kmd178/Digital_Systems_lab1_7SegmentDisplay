@@ -21,11 +21,16 @@ module FourDigitLEDdriver(
 );
 wire [7:0] Led;
 wire [3:0] char;
+wire CLK0;
 assign {a,b,c,d,e,f,g,dp}=Led;
+
+
+
+
 
 anti_bounce_reset kmd2(clk, reset, stabilizedRESET);
 anti_bounce kmd3(clk, reset , BTN2, stabilizedButton);
-ledDataFeeder kmd1(clk,stabilizedRESET,stabilizedButton,char,an0,an1,an2,an3);
+ledDataFeeder kmd1(CLKDV,stabilizedRESET,stabilizedButton,char,an0,an1,an2,an3);
 LEDdecoder kmd(char,Led);
 
    DCM #(
@@ -48,23 +53,10 @@ LEDdecoder kmd(char,Led);
       .STARTUP_WAIT("FALSE")   // Delay configuration DONE until DCM LOCK, TRUE/FALSE
    ) DCM_inst (
       .CLK0(CLK0),     // 0 degree DCM CLK output
-      .CLK180(CLK180), // 180 degree DCM CLK output
-      .CLK270(CLK270), // 270 degree DCM CLK output
-      .CLK2X(CLK2X),   // 2X DCM CLK output
-      .CLK2X180(CLK2X180), // 2X, 180 degree DCM CLK out
-      .CLK90(CLK90),   // 90 degree DCM CLK output
       .CLKDV(CLKDV),   // Divided DCM CLK out (CLKDV_DIVIDE)
-      .CLKFX(CLKFX),   // DCM CLK synthesis out (M/D)
-      .CLKFX180(CLKFX180), // 180 degree CLK synthesis out
-      .LOCKED(LOCKED), // DCM LOCK status output
-      .PSDONE(PSDONE), // Dynamic phase adjust done output
-      .STATUS(STATUS), // 8-bit DCM status bits output
-      .CLKFB(CLKFB),   // DCM clock feedback
+      .CLKFB(CLK0),   // DCM clock feedback
       .CLKIN(clk),   // Clock input (from IBUFG, BUFG or DCM)
-      .PSCLK(PSCLK),   // Dynamic phase adjust clock input
-      .PSEN(PSEN),     // Dynamic phase adjust enable input
-      .PSINCDEC(PSINCDEC), // Dynamic phase adjust increment/decrement
-      .RST(RST)        // DCM asynchronous reset input
+      .RST(reset)        // DCM asynchronous reset input
    );
 
 

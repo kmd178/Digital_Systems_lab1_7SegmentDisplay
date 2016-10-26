@@ -1,0 +1,1149 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 4
+-n 3 -fastpaths -xml FourDigitLEDdriver.twx FourDigitLEDdriver.ncd -o
+FourDigitLEDdriver.twr FourDigitLEDdriver.pcf -ucf system.ucf
+
+Design file:              FourDigitLEDdriver.ncd
+Physical constraint file: FourDigitLEDdriver.pcf
+Device,package,speed:     xc3s200,ft256,-4 (PRODUCTION 1.39 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+================================================================================
+Timing constraint: TS_clk = PERIOD TIMEGRP "clk" 20 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 420 paths analyzed, 96 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   6.000ns.
+--------------------------------------------------------------------------------
+
+Paths for end point kmd3/clk_count_19 (SLICE_X31Y9.CIN), 18 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     15.453ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               kmd3/clk_count_1 (FF)
+  Destination:          kmd3/clk_count_19 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.546ns (Levels of Logic = 10)
+  Clock Path Skew:      -0.001ns (0.140 - 0.141)
+  Source Clock:         clk_IBUFG rising at 0.000ns
+  Destination Clock:    clk_IBUFG rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: kmd3/clk_count_1 to kmd3/clk_count_19
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X31Y0.YQ       Tcko                  0.720   kmd3/clk_count<0>
+                                                       kmd3/clk_count_1
+    SLICE_X31Y0.G1       net (fanout=2)        0.758   kmd3/clk_count<1>
+    SLICE_X31Y0.COUT     Topcyg                1.039   kmd3/clk_count<0>
+                                                       kmd3/clk_count<1>_rt
+                                                       kmd3/Mcount_clk_count_cy<1>
+    SLICE_X31Y1.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<1>
+    SLICE_X31Y1.COUT     Tbyp                  0.128   kmd3/clk_count<2>
+                                                       kmd3/Mcount_clk_count_cy<2>
+                                                       kmd3/Mcount_clk_count_cy<3>
+    SLICE_X31Y2.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<3>
+    SLICE_X31Y2.COUT     Tbyp                  0.128   kmd3/clk_count<4>
+                                                       kmd3/Mcount_clk_count_cy<4>
+                                                       kmd3/Mcount_clk_count_cy<5>
+    SLICE_X31Y3.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<5>
+    SLICE_X31Y3.COUT     Tbyp                  0.128   kmd3/clk_count<6>
+                                                       kmd3/Mcount_clk_count_cy<6>
+                                                       kmd3/Mcount_clk_count_cy<7>
+    SLICE_X31Y4.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<7>
+    SLICE_X31Y4.COUT     Tbyp                  0.128   kmd3/clk_count<8>
+                                                       kmd3/Mcount_clk_count_cy<8>
+                                                       kmd3/Mcount_clk_count_cy<9>
+    SLICE_X31Y5.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<9>
+    SLICE_X31Y5.COUT     Tbyp                  0.128   kmd3/clk_count<10>
+                                                       kmd3/Mcount_clk_count_cy<10>
+                                                       kmd3/Mcount_clk_count_cy<11>
+    SLICE_X31Y6.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<11>
+    SLICE_X31Y6.COUT     Tbyp                  0.128   kmd3/clk_count<12>
+                                                       kmd3/Mcount_clk_count_cy<12>
+                                                       kmd3/Mcount_clk_count_cy<13>
+    SLICE_X31Y7.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<13>
+    SLICE_X31Y7.COUT     Tbyp                  0.128   kmd3/clk_count<14>
+                                                       kmd3/Mcount_clk_count_cy<14>
+                                                       kmd3/Mcount_clk_count_cy<15>
+    SLICE_X31Y8.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<15>
+    SLICE_X31Y8.COUT     Tbyp                  0.128   kmd3/clk_count<16>
+                                                       kmd3/Mcount_clk_count_cy<16>
+                                                       kmd3/Mcount_clk_count_cy<17>
+    SLICE_X31Y9.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<17>
+    SLICE_X31Y9.CLK      Tcinck                1.005   kmd3/clk_count<18>
+                                                       kmd3/Mcount_clk_count_cy<18>
+                                                       kmd3/Mcount_clk_count_xor<19>
+                                                       kmd3/clk_count_19
+    -------------------------------------------------  ---------------------------
+    Total                                      4.546ns (3.788ns logic, 0.758ns route)
+                                                       (83.3% logic, 16.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     15.744ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               kmd3/clk_count_5 (FF)
+  Destination:          kmd3/clk_count_19 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.255ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.001ns (0.140 - 0.141)
+  Source Clock:         clk_IBUFG rising at 0.000ns
+  Destination Clock:    clk_IBUFG rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: kmd3/clk_count_5 to kmd3/clk_count_19
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X31Y2.YQ       Tcko                  0.720   kmd3/clk_count<4>
+                                                       kmd3/clk_count_5
+    SLICE_X31Y2.G1       net (fanout=2)        0.723   kmd3/clk_count<5>
+    SLICE_X31Y2.COUT     Topcyg                1.039   kmd3/clk_count<4>
+                                                       kmd3/clk_count<5>_rt
+                                                       kmd3/Mcount_clk_count_cy<5>
+    SLICE_X31Y3.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<5>
+    SLICE_X31Y3.COUT     Tbyp                  0.128   kmd3/clk_count<6>
+                                                       kmd3/Mcount_clk_count_cy<6>
+                                                       kmd3/Mcount_clk_count_cy<7>
+    SLICE_X31Y4.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<7>
+    SLICE_X31Y4.COUT     Tbyp                  0.128   kmd3/clk_count<8>
+                                                       kmd3/Mcount_clk_count_cy<8>
+                                                       kmd3/Mcount_clk_count_cy<9>
+    SLICE_X31Y5.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<9>
+    SLICE_X31Y5.COUT     Tbyp                  0.128   kmd3/clk_count<10>
+                                                       kmd3/Mcount_clk_count_cy<10>
+                                                       kmd3/Mcount_clk_count_cy<11>
+    SLICE_X31Y6.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<11>
+    SLICE_X31Y6.COUT     Tbyp                  0.128   kmd3/clk_count<12>
+                                                       kmd3/Mcount_clk_count_cy<12>
+                                                       kmd3/Mcount_clk_count_cy<13>
+    SLICE_X31Y7.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<13>
+    SLICE_X31Y7.COUT     Tbyp                  0.128   kmd3/clk_count<14>
+                                                       kmd3/Mcount_clk_count_cy<14>
+                                                       kmd3/Mcount_clk_count_cy<15>
+    SLICE_X31Y8.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<15>
+    SLICE_X31Y8.COUT     Tbyp                  0.128   kmd3/clk_count<16>
+                                                       kmd3/Mcount_clk_count_cy<16>
+                                                       kmd3/Mcount_clk_count_cy<17>
+    SLICE_X31Y9.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<17>
+    SLICE_X31Y9.CLK      Tcinck                1.005   kmd3/clk_count<18>
+                                                       kmd3/Mcount_clk_count_cy<18>
+                                                       kmd3/Mcount_clk_count_xor<19>
+                                                       kmd3/clk_count_19
+    -------------------------------------------------  ---------------------------
+    Total                                      4.255ns (3.532ns logic, 0.723ns route)
+                                                       (83.0% logic, 17.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     15.754ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               kmd3/clk_count_2 (FF)
+  Destination:          kmd3/clk_count_19 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.245ns (Levels of Logic = 9)
+  Clock Path Skew:      -0.001ns (0.140 - 0.141)
+  Source Clock:         clk_IBUFG rising at 0.000ns
+  Destination Clock:    clk_IBUFG rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: kmd3/clk_count_2 to kmd3/clk_count_19
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X31Y1.XQ       Tcko                  0.720   kmd3/clk_count<2>
+                                                       kmd3/clk_count_2
+    SLICE_X31Y1.F2       net (fanout=2)        0.597   kmd3/clk_count<2>
+    SLICE_X31Y1.COUT     Topcyf                1.027   kmd3/clk_count<2>
+                                                       kmd3/clk_count<2>_rt
+                                                       kmd3/Mcount_clk_count_cy<2>
+                                                       kmd3/Mcount_clk_count_cy<3>
+    SLICE_X31Y2.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<3>
+    SLICE_X31Y2.COUT     Tbyp                  0.128   kmd3/clk_count<4>
+                                                       kmd3/Mcount_clk_count_cy<4>
+                                                       kmd3/Mcount_clk_count_cy<5>
+    SLICE_X31Y3.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<5>
+    SLICE_X31Y3.COUT     Tbyp                  0.128   kmd3/clk_count<6>
+                                                       kmd3/Mcount_clk_count_cy<6>
+                                                       kmd3/Mcount_clk_count_cy<7>
+    SLICE_X31Y4.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<7>
+    SLICE_X31Y4.COUT     Tbyp                  0.128   kmd3/clk_count<8>
+                                                       kmd3/Mcount_clk_count_cy<8>
+                                                       kmd3/Mcount_clk_count_cy<9>
+    SLICE_X31Y5.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<9>
+    SLICE_X31Y5.COUT     Tbyp                  0.128   kmd3/clk_count<10>
+                                                       kmd3/Mcount_clk_count_cy<10>
+                                                       kmd3/Mcount_clk_count_cy<11>
+    SLICE_X31Y6.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<11>
+    SLICE_X31Y6.COUT     Tbyp                  0.128   kmd3/clk_count<12>
+                                                       kmd3/Mcount_clk_count_cy<12>
+                                                       kmd3/Mcount_clk_count_cy<13>
+    SLICE_X31Y7.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<13>
+    SLICE_X31Y7.COUT     Tbyp                  0.128   kmd3/clk_count<14>
+                                                       kmd3/Mcount_clk_count_cy<14>
+                                                       kmd3/Mcount_clk_count_cy<15>
+    SLICE_X31Y8.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<15>
+    SLICE_X31Y8.COUT     Tbyp                  0.128   kmd3/clk_count<16>
+                                                       kmd3/Mcount_clk_count_cy<16>
+                                                       kmd3/Mcount_clk_count_cy<17>
+    SLICE_X31Y9.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<17>
+    SLICE_X31Y9.CLK      Tcinck                1.005   kmd3/clk_count<18>
+                                                       kmd3/Mcount_clk_count_cy<18>
+                                                       kmd3/Mcount_clk_count_xor<19>
+                                                       kmd3/clk_count_19
+    -------------------------------------------------  ---------------------------
+    Total                                      4.245ns (3.648ns logic, 0.597ns route)
+                                                       (85.9% logic, 14.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point kmd3/clk_count_18 (SLICE_X31Y9.CIN), 18 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     15.472ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               kmd3/clk_count_1 (FF)
+  Destination:          kmd3/clk_count_18 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.527ns (Levels of Logic = 10)
+  Clock Path Skew:      -0.001ns (0.140 - 0.141)
+  Source Clock:         clk_IBUFG rising at 0.000ns
+  Destination Clock:    clk_IBUFG rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: kmd3/clk_count_1 to kmd3/clk_count_18
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X31Y0.YQ       Tcko                  0.720   kmd3/clk_count<0>
+                                                       kmd3/clk_count_1
+    SLICE_X31Y0.G1       net (fanout=2)        0.758   kmd3/clk_count<1>
+    SLICE_X31Y0.COUT     Topcyg                1.039   kmd3/clk_count<0>
+                                                       kmd3/clk_count<1>_rt
+                                                       kmd3/Mcount_clk_count_cy<1>
+    SLICE_X31Y1.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<1>
+    SLICE_X31Y1.COUT     Tbyp                  0.128   kmd3/clk_count<2>
+                                                       kmd3/Mcount_clk_count_cy<2>
+                                                       kmd3/Mcount_clk_count_cy<3>
+    SLICE_X31Y2.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<3>
+    SLICE_X31Y2.COUT     Tbyp                  0.128   kmd3/clk_count<4>
+                                                       kmd3/Mcount_clk_count_cy<4>
+                                                       kmd3/Mcount_clk_count_cy<5>
+    SLICE_X31Y3.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<5>
+    SLICE_X31Y3.COUT     Tbyp                  0.128   kmd3/clk_count<6>
+                                                       kmd3/Mcount_clk_count_cy<6>
+                                                       kmd3/Mcount_clk_count_cy<7>
+    SLICE_X31Y4.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<7>
+    SLICE_X31Y4.COUT     Tbyp                  0.128   kmd3/clk_count<8>
+                                                       kmd3/Mcount_clk_count_cy<8>
+                                                       kmd3/Mcount_clk_count_cy<9>
+    SLICE_X31Y5.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<9>
+    SLICE_X31Y5.COUT     Tbyp                  0.128   kmd3/clk_count<10>
+                                                       kmd3/Mcount_clk_count_cy<10>
+                                                       kmd3/Mcount_clk_count_cy<11>
+    SLICE_X31Y6.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<11>
+    SLICE_X31Y6.COUT     Tbyp                  0.128   kmd3/clk_count<12>
+                                                       kmd3/Mcount_clk_count_cy<12>
+                                                       kmd3/Mcount_clk_count_cy<13>
+    SLICE_X31Y7.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<13>
+    SLICE_X31Y7.COUT     Tbyp                  0.128   kmd3/clk_count<14>
+                                                       kmd3/Mcount_clk_count_cy<14>
+                                                       kmd3/Mcount_clk_count_cy<15>
+    SLICE_X31Y8.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<15>
+    SLICE_X31Y8.COUT     Tbyp                  0.128   kmd3/clk_count<16>
+                                                       kmd3/Mcount_clk_count_cy<16>
+                                                       kmd3/Mcount_clk_count_cy<17>
+    SLICE_X31Y9.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<17>
+    SLICE_X31Y9.CLK      Tcinck                0.986   kmd3/clk_count<18>
+                                                       kmd3/Mcount_clk_count_xor<18>
+                                                       kmd3/clk_count_18
+    -------------------------------------------------  ---------------------------
+    Total                                      4.527ns (3.769ns logic, 0.758ns route)
+                                                       (83.3% logic, 16.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     15.763ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               kmd3/clk_count_5 (FF)
+  Destination:          kmd3/clk_count_18 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.236ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.001ns (0.140 - 0.141)
+  Source Clock:         clk_IBUFG rising at 0.000ns
+  Destination Clock:    clk_IBUFG rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: kmd3/clk_count_5 to kmd3/clk_count_18
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X31Y2.YQ       Tcko                  0.720   kmd3/clk_count<4>
+                                                       kmd3/clk_count_5
+    SLICE_X31Y2.G1       net (fanout=2)        0.723   kmd3/clk_count<5>
+    SLICE_X31Y2.COUT     Topcyg                1.039   kmd3/clk_count<4>
+                                                       kmd3/clk_count<5>_rt
+                                                       kmd3/Mcount_clk_count_cy<5>
+    SLICE_X31Y3.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<5>
+    SLICE_X31Y3.COUT     Tbyp                  0.128   kmd3/clk_count<6>
+                                                       kmd3/Mcount_clk_count_cy<6>
+                                                       kmd3/Mcount_clk_count_cy<7>
+    SLICE_X31Y4.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<7>
+    SLICE_X31Y4.COUT     Tbyp                  0.128   kmd3/clk_count<8>
+                                                       kmd3/Mcount_clk_count_cy<8>
+                                                       kmd3/Mcount_clk_count_cy<9>
+    SLICE_X31Y5.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<9>
+    SLICE_X31Y5.COUT     Tbyp                  0.128   kmd3/clk_count<10>
+                                                       kmd3/Mcount_clk_count_cy<10>
+                                                       kmd3/Mcount_clk_count_cy<11>
+    SLICE_X31Y6.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<11>
+    SLICE_X31Y6.COUT     Tbyp                  0.128   kmd3/clk_count<12>
+                                                       kmd3/Mcount_clk_count_cy<12>
+                                                       kmd3/Mcount_clk_count_cy<13>
+    SLICE_X31Y7.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<13>
+    SLICE_X31Y7.COUT     Tbyp                  0.128   kmd3/clk_count<14>
+                                                       kmd3/Mcount_clk_count_cy<14>
+                                                       kmd3/Mcount_clk_count_cy<15>
+    SLICE_X31Y8.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<15>
+    SLICE_X31Y8.COUT     Tbyp                  0.128   kmd3/clk_count<16>
+                                                       kmd3/Mcount_clk_count_cy<16>
+                                                       kmd3/Mcount_clk_count_cy<17>
+    SLICE_X31Y9.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<17>
+    SLICE_X31Y9.CLK      Tcinck                0.986   kmd3/clk_count<18>
+                                                       kmd3/Mcount_clk_count_xor<18>
+                                                       kmd3/clk_count_18
+    -------------------------------------------------  ---------------------------
+    Total                                      4.236ns (3.513ns logic, 0.723ns route)
+                                                       (82.9% logic, 17.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     15.773ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               kmd3/clk_count_2 (FF)
+  Destination:          kmd3/clk_count_18 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.226ns (Levels of Logic = 9)
+  Clock Path Skew:      -0.001ns (0.140 - 0.141)
+  Source Clock:         clk_IBUFG rising at 0.000ns
+  Destination Clock:    clk_IBUFG rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: kmd3/clk_count_2 to kmd3/clk_count_18
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X31Y1.XQ       Tcko                  0.720   kmd3/clk_count<2>
+                                                       kmd3/clk_count_2
+    SLICE_X31Y1.F2       net (fanout=2)        0.597   kmd3/clk_count<2>
+    SLICE_X31Y1.COUT     Topcyf                1.027   kmd3/clk_count<2>
+                                                       kmd3/clk_count<2>_rt
+                                                       kmd3/Mcount_clk_count_cy<2>
+                                                       kmd3/Mcount_clk_count_cy<3>
+    SLICE_X31Y2.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<3>
+    SLICE_X31Y2.COUT     Tbyp                  0.128   kmd3/clk_count<4>
+                                                       kmd3/Mcount_clk_count_cy<4>
+                                                       kmd3/Mcount_clk_count_cy<5>
+    SLICE_X31Y3.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<5>
+    SLICE_X31Y3.COUT     Tbyp                  0.128   kmd3/clk_count<6>
+                                                       kmd3/Mcount_clk_count_cy<6>
+                                                       kmd3/Mcount_clk_count_cy<7>
+    SLICE_X31Y4.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<7>
+    SLICE_X31Y4.COUT     Tbyp                  0.128   kmd3/clk_count<8>
+                                                       kmd3/Mcount_clk_count_cy<8>
+                                                       kmd3/Mcount_clk_count_cy<9>
+    SLICE_X31Y5.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<9>
+    SLICE_X31Y5.COUT     Tbyp                  0.128   kmd3/clk_count<10>
+                                                       kmd3/Mcount_clk_count_cy<10>
+                                                       kmd3/Mcount_clk_count_cy<11>
+    SLICE_X31Y6.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<11>
+    SLICE_X31Y6.COUT     Tbyp                  0.128   kmd3/clk_count<12>
+                                                       kmd3/Mcount_clk_count_cy<12>
+                                                       kmd3/Mcount_clk_count_cy<13>
+    SLICE_X31Y7.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<13>
+    SLICE_X31Y7.COUT     Tbyp                  0.128   kmd3/clk_count<14>
+                                                       kmd3/Mcount_clk_count_cy<14>
+                                                       kmd3/Mcount_clk_count_cy<15>
+    SLICE_X31Y8.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<15>
+    SLICE_X31Y8.COUT     Tbyp                  0.128   kmd3/clk_count<16>
+                                                       kmd3/Mcount_clk_count_cy<16>
+                                                       kmd3/Mcount_clk_count_cy<17>
+    SLICE_X31Y9.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<17>
+    SLICE_X31Y9.CLK      Tcinck                0.986   kmd3/clk_count<18>
+                                                       kmd3/Mcount_clk_count_xor<18>
+                                                       kmd3/clk_count_18
+    -------------------------------------------------  ---------------------------
+    Total                                      4.226ns (3.629ns logic, 0.597ns route)
+                                                       (85.9% logic, 14.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point kmd3/clk_count_17 (SLICE_X31Y8.CIN), 16 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     15.581ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               kmd3/clk_count_1 (FF)
+  Destination:          kmd3/clk_count_17 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.418ns (Levels of Logic = 9)
+  Clock Path Skew:      -0.001ns (0.140 - 0.141)
+  Source Clock:         clk_IBUFG rising at 0.000ns
+  Destination Clock:    clk_IBUFG rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: kmd3/clk_count_1 to kmd3/clk_count_17
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X31Y0.YQ       Tcko                  0.720   kmd3/clk_count<0>
+                                                       kmd3/clk_count_1
+    SLICE_X31Y0.G1       net (fanout=2)        0.758   kmd3/clk_count<1>
+    SLICE_X31Y0.COUT     Topcyg                1.039   kmd3/clk_count<0>
+                                                       kmd3/clk_count<1>_rt
+                                                       kmd3/Mcount_clk_count_cy<1>
+    SLICE_X31Y1.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<1>
+    SLICE_X31Y1.COUT     Tbyp                  0.128   kmd3/clk_count<2>
+                                                       kmd3/Mcount_clk_count_cy<2>
+                                                       kmd3/Mcount_clk_count_cy<3>
+    SLICE_X31Y2.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<3>
+    SLICE_X31Y2.COUT     Tbyp                  0.128   kmd3/clk_count<4>
+                                                       kmd3/Mcount_clk_count_cy<4>
+                                                       kmd3/Mcount_clk_count_cy<5>
+    SLICE_X31Y3.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<5>
+    SLICE_X31Y3.COUT     Tbyp                  0.128   kmd3/clk_count<6>
+                                                       kmd3/Mcount_clk_count_cy<6>
+                                                       kmd3/Mcount_clk_count_cy<7>
+    SLICE_X31Y4.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<7>
+    SLICE_X31Y4.COUT     Tbyp                  0.128   kmd3/clk_count<8>
+                                                       kmd3/Mcount_clk_count_cy<8>
+                                                       kmd3/Mcount_clk_count_cy<9>
+    SLICE_X31Y5.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<9>
+    SLICE_X31Y5.COUT     Tbyp                  0.128   kmd3/clk_count<10>
+                                                       kmd3/Mcount_clk_count_cy<10>
+                                                       kmd3/Mcount_clk_count_cy<11>
+    SLICE_X31Y6.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<11>
+    SLICE_X31Y6.COUT     Tbyp                  0.128   kmd3/clk_count<12>
+                                                       kmd3/Mcount_clk_count_cy<12>
+                                                       kmd3/Mcount_clk_count_cy<13>
+    SLICE_X31Y7.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<13>
+    SLICE_X31Y7.COUT     Tbyp                  0.128   kmd3/clk_count<14>
+                                                       kmd3/Mcount_clk_count_cy<14>
+                                                       kmd3/Mcount_clk_count_cy<15>
+    SLICE_X31Y8.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<15>
+    SLICE_X31Y8.CLK      Tcinck                1.005   kmd3/clk_count<16>
+                                                       kmd3/Mcount_clk_count_cy<16>
+                                                       kmd3/Mcount_clk_count_xor<17>
+                                                       kmd3/clk_count_17
+    -------------------------------------------------  ---------------------------
+    Total                                      4.418ns (3.660ns logic, 0.758ns route)
+                                                       (82.8% logic, 17.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     15.872ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               kmd3/clk_count_5 (FF)
+  Destination:          kmd3/clk_count_17 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.127ns (Levels of Logic = 7)
+  Clock Path Skew:      -0.001ns (0.140 - 0.141)
+  Source Clock:         clk_IBUFG rising at 0.000ns
+  Destination Clock:    clk_IBUFG rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: kmd3/clk_count_5 to kmd3/clk_count_17
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X31Y2.YQ       Tcko                  0.720   kmd3/clk_count<4>
+                                                       kmd3/clk_count_5
+    SLICE_X31Y2.G1       net (fanout=2)        0.723   kmd3/clk_count<5>
+    SLICE_X31Y2.COUT     Topcyg                1.039   kmd3/clk_count<4>
+                                                       kmd3/clk_count<5>_rt
+                                                       kmd3/Mcount_clk_count_cy<5>
+    SLICE_X31Y3.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<5>
+    SLICE_X31Y3.COUT     Tbyp                  0.128   kmd3/clk_count<6>
+                                                       kmd3/Mcount_clk_count_cy<6>
+                                                       kmd3/Mcount_clk_count_cy<7>
+    SLICE_X31Y4.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<7>
+    SLICE_X31Y4.COUT     Tbyp                  0.128   kmd3/clk_count<8>
+                                                       kmd3/Mcount_clk_count_cy<8>
+                                                       kmd3/Mcount_clk_count_cy<9>
+    SLICE_X31Y5.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<9>
+    SLICE_X31Y5.COUT     Tbyp                  0.128   kmd3/clk_count<10>
+                                                       kmd3/Mcount_clk_count_cy<10>
+                                                       kmd3/Mcount_clk_count_cy<11>
+    SLICE_X31Y6.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<11>
+    SLICE_X31Y6.COUT     Tbyp                  0.128   kmd3/clk_count<12>
+                                                       kmd3/Mcount_clk_count_cy<12>
+                                                       kmd3/Mcount_clk_count_cy<13>
+    SLICE_X31Y7.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<13>
+    SLICE_X31Y7.COUT     Tbyp                  0.128   kmd3/clk_count<14>
+                                                       kmd3/Mcount_clk_count_cy<14>
+                                                       kmd3/Mcount_clk_count_cy<15>
+    SLICE_X31Y8.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<15>
+    SLICE_X31Y8.CLK      Tcinck                1.005   kmd3/clk_count<16>
+                                                       kmd3/Mcount_clk_count_cy<16>
+                                                       kmd3/Mcount_clk_count_xor<17>
+                                                       kmd3/clk_count_17
+    -------------------------------------------------  ---------------------------
+    Total                                      4.127ns (3.404ns logic, 0.723ns route)
+                                                       (82.5% logic, 17.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     15.882ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               kmd3/clk_count_2 (FF)
+  Destination:          kmd3/clk_count_17 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.117ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.001ns (0.140 - 0.141)
+  Source Clock:         clk_IBUFG rising at 0.000ns
+  Destination Clock:    clk_IBUFG rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: kmd3/clk_count_2 to kmd3/clk_count_17
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X31Y1.XQ       Tcko                  0.720   kmd3/clk_count<2>
+                                                       kmd3/clk_count_2
+    SLICE_X31Y1.F2       net (fanout=2)        0.597   kmd3/clk_count<2>
+    SLICE_X31Y1.COUT     Topcyf                1.027   kmd3/clk_count<2>
+                                                       kmd3/clk_count<2>_rt
+                                                       kmd3/Mcount_clk_count_cy<2>
+                                                       kmd3/Mcount_clk_count_cy<3>
+    SLICE_X31Y2.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<3>
+    SLICE_X31Y2.COUT     Tbyp                  0.128   kmd3/clk_count<4>
+                                                       kmd3/Mcount_clk_count_cy<4>
+                                                       kmd3/Mcount_clk_count_cy<5>
+    SLICE_X31Y3.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<5>
+    SLICE_X31Y3.COUT     Tbyp                  0.128   kmd3/clk_count<6>
+                                                       kmd3/Mcount_clk_count_cy<6>
+                                                       kmd3/Mcount_clk_count_cy<7>
+    SLICE_X31Y4.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<7>
+    SLICE_X31Y4.COUT     Tbyp                  0.128   kmd3/clk_count<8>
+                                                       kmd3/Mcount_clk_count_cy<8>
+                                                       kmd3/Mcount_clk_count_cy<9>
+    SLICE_X31Y5.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<9>
+    SLICE_X31Y5.COUT     Tbyp                  0.128   kmd3/clk_count<10>
+                                                       kmd3/Mcount_clk_count_cy<10>
+                                                       kmd3/Mcount_clk_count_cy<11>
+    SLICE_X31Y6.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<11>
+    SLICE_X31Y6.COUT     Tbyp                  0.128   kmd3/clk_count<12>
+                                                       kmd3/Mcount_clk_count_cy<12>
+                                                       kmd3/Mcount_clk_count_cy<13>
+    SLICE_X31Y7.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<13>
+    SLICE_X31Y7.COUT     Tbyp                  0.128   kmd3/clk_count<14>
+                                                       kmd3/Mcount_clk_count_cy<14>
+                                                       kmd3/Mcount_clk_count_cy<15>
+    SLICE_X31Y8.CIN      net (fanout=1)        0.000   kmd3/Mcount_clk_count_cy<15>
+    SLICE_X31Y8.CLK      Tcinck                1.005   kmd3/clk_count<16>
+                                                       kmd3/Mcount_clk_count_cy<16>
+                                                       kmd3/Mcount_clk_count_xor<17>
+                                                       kmd3/clk_count_17
+    -------------------------------------------------  ---------------------------
+    Total                                      4.117ns (3.520ns logic, 0.597ns route)
+                                                       (85.5% logic, 14.5% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_clk = PERIOD TIMEGRP "clk" 20 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point kmd3/clk_count_16 (SLICE_X31Y8.F3), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.291ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               kmd3/clk_count_16 (FF)
+  Destination:          kmd3/clk_count_16 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.291ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_IBUFG rising at 20.000ns
+  Destination Clock:    clk_IBUFG rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: kmd3/clk_count_16 to kmd3/clk_count_16
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X31Y8.XQ       Tcko                  0.576   kmd3/clk_count<16>
+                                                       kmd3/clk_count_16
+    SLICE_X31Y8.F3       net (fanout=2)        0.322   kmd3/clk_count<16>
+    SLICE_X31Y8.CLK      Tckf        (-Th)    -0.393   kmd3/clk_count<16>
+                                                       kmd3/clk_count<16>_rt
+                                                       kmd3/Mcount_clk_count_xor<16>
+                                                       kmd3/clk_count_16
+    -------------------------------------------------  ---------------------------
+    Total                                      1.291ns (0.969ns logic, 0.322ns route)
+                                                       (75.1% logic, 24.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point kmd2/clk_count_0 (SLICE_X28Y2.F3), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.336ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               kmd2/clk_count_0 (FF)
+  Destination:          kmd2/clk_count_0 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.336ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_IBUFG rising at 20.000ns
+  Destination Clock:    clk_IBUFG rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: kmd2/clk_count_0 to kmd2/clk_count_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X28Y2.XQ       Tcko                  0.576   kmd2/clk_count<0>
+                                                       kmd2/clk_count_0
+    SLICE_X28Y2.F3       net (fanout=2)        0.322   kmd2/clk_count<0>
+    SLICE_X28Y2.CLK      Tckf        (-Th)    -0.438   kmd2/clk_count<0>
+                                                       kmd2/Mcount_clk_count_lut<0>_INV_0
+                                                       kmd2/Mcount_clk_count_xor<0>
+                                                       kmd2/clk_count_0
+    -------------------------------------------------  ---------------------------
+    Total                                      1.336ns (1.014ns logic, 0.322ns route)
+                                                       (75.9% logic, 24.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point kmd3/clk_count_0 (SLICE_X31Y0.F3), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.339ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               kmd3/clk_count_0 (FF)
+  Destination:          kmd3/clk_count_0 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.339ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_IBUFG rising at 20.000ns
+  Destination Clock:    clk_IBUFG rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: kmd3/clk_count_0 to kmd3/clk_count_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X31Y0.XQ       Tcko                  0.576   kmd3/clk_count<0>
+                                                       kmd3/clk_count_0
+    SLICE_X31Y0.F3       net (fanout=2)        0.370   kmd3/clk_count<0>
+    SLICE_X31Y0.CLK      Tckf        (-Th)    -0.393   kmd3/clk_count<0>
+                                                       kmd3/Mcount_clk_count_lut<0>_INV_0
+                                                       kmd3/Mcount_clk_count_xor<0>
+                                                       kmd3/clk_count_0
+    -------------------------------------------------  ---------------------------
+    Total                                      1.339ns (0.969ns logic, 0.370ns route)
+                                                       (72.4% logic, 27.6% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_clk = PERIOD TIMEGRP "clk" 20 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 14.000ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 20.000ns
+  Low pulse: 10.000ns
+  Low pulse limit: 3.000ns (Tdcmpw_CLKIN_50_100)
+  Physical resource: DCM_inst/CLKIN
+  Logical resource: DCM_inst/CLKIN
+  Location pin: DCM_X0Y0.CLKIN
+  Clock network: clk_IBUFG1
+--------------------------------------------------------------------------------
+Slack: 14.000ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 3.000ns (Tdcmpw_CLKIN_50_100)
+  Physical resource: DCM_inst/CLKIN
+  Logical resource: DCM_inst/CLKIN
+  Location pin: DCM_X0Y0.CLKIN
+  Clock network: clk_IBUFG1
+--------------------------------------------------------------------------------
+Slack: 14.013ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 5.987ns (167.029MHz) (Tdcmpc)
+  Physical resource: DCM_inst/CLKIN
+  Logical resource: DCM_inst/CLKIN
+  Location pin: DCM_X0Y0.CLKIN
+  Clock network: clk_IBUFG1
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_CLKDV_OBUF = PERIOD TIMEGRP "CLKDV_OBUF" TS_clk * 16 HIGH 
+50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 67 paths analyzed, 50 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   5.031ns.
+--------------------------------------------------------------------------------
+
+Paths for end point kmd1/loadCharLED_0 (SLICE_X32Y15.G2), 3 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     314.969ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               kmd1/SystemCounter_3 (FF)
+  Destination:          kmd1/loadCharLED_0 (FF)
+  Requirement:          320.000ns
+  Data Path Delay:      4.741ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.290ns (1.057 - 1.347)
+  Source Clock:         CLKDV_OBUF rising at 0.000ns
+  Destination Clock:    CLKDV_OBUF rising at 320.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: kmd1/SystemCounter_3 to kmd1/loadCharLED_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X34Y16.XQ      Tcko                  0.720   kmd1/SystemCounter<3>
+                                                       kmd1/SystemCounter_3
+    SLICE_X33Y15.G2      net (fanout=12)       0.917   kmd1/SystemCounter<3>
+    SLICE_X33Y15.Y       Tilo                  0.551   kmd1/loadCharLED_mux0000<0>132
+                                                       kmd1/loadCharLED_mux0000<0>51
+    SLICE_X32Y14.F1      net (fanout=2)        0.276   kmd1/loadCharLED_mux0000<0>_bdd4
+    SLICE_X32Y14.X       Tilo                  0.608   kmd1/loadCharLED_mux0000<0>114
+                                                       kmd1/loadCharLED_mux0000<0>114
+    SLICE_X32Y15.G2      net (fanout=1)        0.619   kmd1/loadCharLED_mux0000<0>114
+    SLICE_X32Y15.CLK     Tgck                  1.050   kmd1/loadCharLED<0>
+                                                       kmd1/loadCharLED_mux0000<0>19712
+                                                       kmd1/loadCharLED_mux0000<0>1971_f5
+                                                       kmd1/loadCharLED_0
+    -------------------------------------------------  ---------------------------
+    Total                                      4.741ns (2.929ns logic, 1.812ns route)
+                                                       (61.8% logic, 38.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     315.277ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               kmd1/SystemCounter_3 (FF)
+  Destination:          kmd1/loadCharLED_0 (FF)
+  Requirement:          320.000ns
+  Data Path Delay:      4.433ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.290ns (1.057 - 1.347)
+  Source Clock:         CLKDV_OBUF rising at 0.000ns
+  Destination Clock:    CLKDV_OBUF rising at 320.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: kmd1/SystemCounter_3 to kmd1/loadCharLED_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X34Y16.XQ      Tcko                  0.720   kmd1/SystemCounter<3>
+                                                       kmd1/SystemCounter_3
+    SLICE_X32Y14.G3      net (fanout=12)       0.797   kmd1/SystemCounter<3>
+    SLICE_X32Y14.Y       Tilo                  0.608   kmd1/loadCharLED_mux0000<0>114
+                                                       kmd1/loadCharLED_mux0000<0>41
+    SLICE_X32Y14.F4      net (fanout=2)        0.031   kmd1/loadCharLED_mux0000<0>_bdd3
+    SLICE_X32Y14.X       Tilo                  0.608   kmd1/loadCharLED_mux0000<0>114
+                                                       kmd1/loadCharLED_mux0000<0>114
+    SLICE_X32Y15.G2      net (fanout=1)        0.619   kmd1/loadCharLED_mux0000<0>114
+    SLICE_X32Y15.CLK     Tgck                  1.050   kmd1/loadCharLED<0>
+                                                       kmd1/loadCharLED_mux0000<0>19712
+                                                       kmd1/loadCharLED_mux0000<0>1971_f5
+                                                       kmd1/loadCharLED_0
+    -------------------------------------------------  ---------------------------
+    Total                                      4.433ns (2.986ns logic, 1.447ns route)
+                                                       (67.4% logic, 32.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     316.197ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               kmd1/SystemCounter_2 (FF)
+  Destination:          kmd1/loadCharLED_0 (FF)
+  Requirement:          320.000ns
+  Data Path Delay:      3.513ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.290ns (1.057 - 1.347)
+  Source Clock:         CLKDV_OBUF rising at 0.000ns
+  Destination Clock:    CLKDV_OBUF rising at 320.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: kmd1/SystemCounter_2 to kmd1/loadCharLED_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X34Y16.YQ      Tcko                  0.720   kmd1/SystemCounter<3>
+                                                       kmd1/SystemCounter_2
+    SLICE_X32Y14.F3      net (fanout=14)       0.516   kmd1/SystemCounter<2>
+    SLICE_X32Y14.X       Tilo                  0.608   kmd1/loadCharLED_mux0000<0>114
+                                                       kmd1/loadCharLED_mux0000<0>114
+    SLICE_X32Y15.G2      net (fanout=1)        0.619   kmd1/loadCharLED_mux0000<0>114
+    SLICE_X32Y15.CLK     Tgck                  1.050   kmd1/loadCharLED<0>
+                                                       kmd1/loadCharLED_mux0000<0>19712
+                                                       kmd1/loadCharLED_mux0000<0>1971_f5
+                                                       kmd1/loadCharLED_0
+    -------------------------------------------------  ---------------------------
+    Total                                      3.513ns (2.378ns logic, 1.135ns route)
+                                                       (67.7% logic, 32.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point kmd1/loadCharLED_0 (SLICE_X32Y15.G4), 3 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     314.974ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               kmd1/SystemCounter_3 (FF)
+  Destination:          kmd1/loadCharLED_0 (FF)
+  Requirement:          320.000ns
+  Data Path Delay:      4.736ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.290ns (1.057 - 1.347)
+  Source Clock:         CLKDV_OBUF rising at 0.000ns
+  Destination Clock:    CLKDV_OBUF rising at 320.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: kmd1/SystemCounter_3 to kmd1/loadCharLED_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X34Y16.XQ      Tcko                  0.720   kmd1/SystemCounter<3>
+                                                       kmd1/SystemCounter_3
+    SLICE_X33Y15.G2      net (fanout=12)       0.917   kmd1/SystemCounter<3>
+    SLICE_X33Y15.Y       Tilo                  0.551   kmd1/loadCharLED_mux0000<0>132
+                                                       kmd1/loadCharLED_mux0000<0>51
+    SLICE_X33Y15.F1      net (fanout=2)        0.854   kmd1/loadCharLED_mux0000<0>_bdd4
+    SLICE_X33Y15.X       Tilo                  0.551   kmd1/loadCharLED_mux0000<0>132
+                                                       kmd1/loadCharLED_mux0000<0>132
+    SLICE_X32Y15.G4      net (fanout=1)        0.093   kmd1/loadCharLED_mux0000<0>132
+    SLICE_X32Y15.CLK     Tgck                  1.050   kmd1/loadCharLED<0>
+                                                       kmd1/loadCharLED_mux0000<0>19712
+                                                       kmd1/loadCharLED_mux0000<0>1971_f5
+                                                       kmd1/loadCharLED_0
+    -------------------------------------------------  ---------------------------
+    Total                                      4.736ns (2.872ns logic, 1.864ns route)
+                                                       (60.6% logic, 39.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     315.838ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               kmd1/SystemCounter_3 (FF)
+  Destination:          kmd1/loadCharLED_0 (FF)
+  Requirement:          320.000ns
+  Data Path Delay:      3.872ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.290ns (1.057 - 1.347)
+  Source Clock:         CLKDV_OBUF rising at 0.000ns
+  Destination Clock:    CLKDV_OBUF rising at 320.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: kmd1/SystemCounter_3 to kmd1/loadCharLED_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X34Y16.XQ      Tcko                  0.720   kmd1/SystemCounter<3>
+                                                       kmd1/SystemCounter_3
+    SLICE_X32Y17.G3      net (fanout=12)       0.474   kmd1/SystemCounter<3>
+    SLICE_X32Y17.Y       Tilo                  0.608   kmd1/loadCharLED_mux0000<1>118
+                                                       kmd1/loadCharLED_mux0000<0>81
+    SLICE_X33Y15.F3      net (fanout=2)        0.376   kmd1/loadCharLED_mux0000<0>_bdd10
+    SLICE_X33Y15.X       Tilo                  0.551   kmd1/loadCharLED_mux0000<0>132
+                                                       kmd1/loadCharLED_mux0000<0>132
+    SLICE_X32Y15.G4      net (fanout=1)        0.093   kmd1/loadCharLED_mux0000<0>132
+    SLICE_X32Y15.CLK     Tgck                  1.050   kmd1/loadCharLED<0>
+                                                       kmd1/loadCharLED_mux0000<0>19712
+                                                       kmd1/loadCharLED_mux0000<0>1971_f5
+                                                       kmd1/loadCharLED_0
+    -------------------------------------------------  ---------------------------
+    Total                                      3.872ns (2.929ns logic, 0.943ns route)
+                                                       (75.6% logic, 24.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     316.586ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               kmd1/SystemCounter_2 (FF)
+  Destination:          kmd1/loadCharLED_0 (FF)
+  Requirement:          320.000ns
+  Data Path Delay:      3.124ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.290ns (1.057 - 1.347)
+  Source Clock:         CLKDV_OBUF rising at 0.000ns
+  Destination Clock:    CLKDV_OBUF rising at 320.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: kmd1/SystemCounter_2 to kmd1/loadCharLED_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X34Y16.YQ      Tcko                  0.720   kmd1/SystemCounter<3>
+                                                       kmd1/SystemCounter_2
+    SLICE_X33Y15.F2      net (fanout=14)       0.710   kmd1/SystemCounter<2>
+    SLICE_X33Y15.X       Tilo                  0.551   kmd1/loadCharLED_mux0000<0>132
+                                                       kmd1/loadCharLED_mux0000<0>132
+    SLICE_X32Y15.G4      net (fanout=1)        0.093   kmd1/loadCharLED_mux0000<0>132
+    SLICE_X32Y15.CLK     Tgck                  1.050   kmd1/loadCharLED<0>
+                                                       kmd1/loadCharLED_mux0000<0>19712
+                                                       kmd1/loadCharLED_mux0000<0>1971_f5
+                                                       kmd1/loadCharLED_0
+    -------------------------------------------------  ---------------------------
+    Total                                      3.124ns (2.321ns logic, 0.803ns route)
+                                                       (74.3% logic, 25.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point kmd1/loadCharLED_1 (SLICE_X33Y16.G2), 3 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     315.220ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               kmd1/SystemCounter_3 (FF)
+  Destination:          kmd1/loadCharLED_1 (FF)
+  Requirement:          320.000ns
+  Data Path Delay:      4.488ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.292ns (1.055 - 1.347)
+  Source Clock:         CLKDV_OBUF rising at 0.000ns
+  Destination Clock:    CLKDV_OBUF rising at 320.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: kmd1/SystemCounter_3 to kmd1/loadCharLED_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X34Y16.XQ      Tcko                  0.720   kmd1/SystemCounter<3>
+                                                       kmd1/SystemCounter_3
+    SLICE_X32Y16.G3      net (fanout=12)       0.474   kmd1/SystemCounter<3>
+    SLICE_X32Y16.Y       Tilo                  0.608   kmd1/loadCharLED_mux0000<1>136
+                                                       kmd1/loadCharLED_mux0000<1>51
+    SLICE_X32Y17.F1      net (fanout=2)        0.615   kmd1/loadCharLED_mux0000<1>_bdd3
+    SLICE_X32Y17.X       Tilo                  0.608   kmd1/loadCharLED_mux0000<1>118
+                                                       kmd1/loadCharLED_mux0000<1>118
+    SLICE_X33Y16.G2      net (fanout=1)        0.470   kmd1/loadCharLED_mux0000<1>118
+    SLICE_X33Y16.CLK     Tgck                  0.993   kmd1/loadCharLED<1>
+                                                       kmd1/loadCharLED_mux0000<1>110512
+                                                       kmd1/loadCharLED_mux0000<1>11051_f5
+                                                       kmd1/loadCharLED_1
+    -------------------------------------------------  ---------------------------
+    Total                                      4.488ns (2.929ns logic, 1.559ns route)
+                                                       (65.3% logic, 34.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     315.786ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               kmd1/SystemCounter_3 (FF)
+  Destination:          kmd1/loadCharLED_1 (FF)
+  Requirement:          320.000ns
+  Data Path Delay:      3.922ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.292ns (1.055 - 1.347)
+  Source Clock:         CLKDV_OBUF rising at 0.000ns
+  Destination Clock:    CLKDV_OBUF rising at 320.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: kmd1/SystemCounter_3 to kmd1/loadCharLED_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X34Y16.XQ      Tcko                  0.720   kmd1/SystemCounter<3>
+                                                       kmd1/SystemCounter_3
+    SLICE_X32Y17.G3      net (fanout=12)       0.474   kmd1/SystemCounter<3>
+    SLICE_X32Y17.Y       Tilo                  0.608   kmd1/loadCharLED_mux0000<1>118
+                                                       kmd1/loadCharLED_mux0000<0>81
+    SLICE_X32Y17.F3      net (fanout=2)        0.049   kmd1/loadCharLED_mux0000<0>_bdd10
+    SLICE_X32Y17.X       Tilo                  0.608   kmd1/loadCharLED_mux0000<1>118
+                                                       kmd1/loadCharLED_mux0000<1>118
+    SLICE_X33Y16.G2      net (fanout=1)        0.470   kmd1/loadCharLED_mux0000<1>118
+    SLICE_X33Y16.CLK     Tgck                  0.993   kmd1/loadCharLED<1>
+                                                       kmd1/loadCharLED_mux0000<1>110512
+                                                       kmd1/loadCharLED_mux0000<1>11051_f5
+                                                       kmd1/loadCharLED_1
+    -------------------------------------------------  ---------------------------
+    Total                                      3.922ns (2.929ns logic, 0.993ns route)
+                                                       (74.7% logic, 25.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     316.401ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               kmd1/SystemCounter_2 (FF)
+  Destination:          kmd1/loadCharLED_1 (FF)
+  Requirement:          320.000ns
+  Data Path Delay:      3.307ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.292ns (1.055 - 1.347)
+  Source Clock:         CLKDV_OBUF rising at 0.000ns
+  Destination Clock:    CLKDV_OBUF rising at 320.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: kmd1/SystemCounter_2 to kmd1/loadCharLED_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X34Y16.YQ      Tcko                  0.720   kmd1/SystemCounter<3>
+                                                       kmd1/SystemCounter_2
+    SLICE_X32Y17.F4      net (fanout=14)       0.516   kmd1/SystemCounter<2>
+    SLICE_X32Y17.X       Tilo                  0.608   kmd1/loadCharLED_mux0000<1>118
+                                                       kmd1/loadCharLED_mux0000<1>118
+    SLICE_X33Y16.G2      net (fanout=1)        0.470   kmd1/loadCharLED_mux0000<1>118
+    SLICE_X33Y16.CLK     Tgck                  0.993   kmd1/loadCharLED<1>
+                                                       kmd1/loadCharLED_mux0000<1>110512
+                                                       kmd1/loadCharLED_mux0000<1>11051_f5
+                                                       kmd1/loadCharLED_1
+    -------------------------------------------------  ---------------------------
+    Total                                      3.307ns (2.321ns logic, 0.986ns route)
+                                                       (70.2% logic, 29.8% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_CLKDV_OBUF = PERIOD TIMEGRP "CLKDV_OBUF" TS_clk * 16 HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point kmd1/SystemCounter_0 (SLICE_X34Y17.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.926ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               kmd1/SystemCounter_0 (FF)
+  Destination:          kmd1/SystemCounter_0 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.926ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLKDV_OBUF rising at 320.000ns
+  Destination Clock:    CLKDV_OBUF rising at 320.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: kmd1/SystemCounter_0 to kmd1/SystemCounter_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X34Y17.XQ      Tcko                  0.576   kmd1/SystemCounter<0>
+                                                       kmd1/SystemCounter_0
+    SLICE_X34Y17.BX      net (fanout=18)       0.633   kmd1/SystemCounter<0>
+    SLICE_X34Y17.CLK     Tckdi       (-Th)     0.283   kmd1/SystemCounter<0>
+                                                       kmd1/SystemCounter_0
+    -------------------------------------------------  ---------------------------
+    Total                                      0.926ns (0.293ns logic, 0.633ns route)
+                                                       (31.6% logic, 68.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point kmd1/loadCharLED_3 (SLICE_X32Y19.G4), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.936ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               kmd1/SystemCounter_0 (FF)
+  Destination:          kmd1/loadCharLED_3 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.173ns (Levels of Logic = 1)
+  Clock Path Skew:      0.237ns (1.315 - 1.078)
+  Source Clock:         CLKDV_OBUF rising at 320.000ns
+  Destination Clock:    CLKDV_OBUF rising at 320.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: kmd1/SystemCounter_0 to kmd1/loadCharLED_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X34Y17.XQ      Tcko                  0.576   kmd1/SystemCounter<0>
+                                                       kmd1/SystemCounter_0
+    SLICE_X32Y19.G4      net (fanout=18)       0.491   kmd1/SystemCounter<0>
+    SLICE_X32Y19.CLK     Tckg        (-Th)    -0.106   kmd1/loadCharLED<3>
+                                                       kmd1/loadCharLED_mux0000<3>11361
+                                                       kmd1/loadCharLED_3
+    -------------------------------------------------  ---------------------------
+    Total                                      1.173ns (0.682ns logic, 0.491ns route)
+                                                       (58.1% logic, 41.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point kmd1/loadCharLED_3 (SLICE_X32Y19.G2), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.034ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               kmd1/SystemCounter_1 (FF)
+  Destination:          kmd1/loadCharLED_3 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.271ns (Levels of Logic = 1)
+  Clock Path Skew:      0.237ns (1.315 - 1.078)
+  Source Clock:         CLKDV_OBUF rising at 320.000ns
+  Destination Clock:    CLKDV_OBUF rising at 320.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: kmd1/SystemCounter_1 to kmd1/loadCharLED_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X34Y17.YQ      Tcko                  0.576   kmd1/SystemCounter<0>
+                                                       kmd1/SystemCounter_1
+    SLICE_X32Y19.G2      net (fanout=11)       0.589   kmd1/SystemCounter<1>
+    SLICE_X32Y19.CLK     Tckg        (-Th)    -0.106   kmd1/loadCharLED<3>
+                                                       kmd1/loadCharLED_mux0000<3>11361
+                                                       kmd1/loadCharLED_3
+    -------------------------------------------------  ---------------------------
+    Total                                      1.271ns (0.682ns logic, 0.589ns route)
+                                                       (53.7% logic, 46.3% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_CLKDV_OBUF = PERIOD TIMEGRP "CLKDV_OBUF" TS_clk * 16 HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 318.274ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 320.000ns
+  Low pulse: 160.000ns
+  Low pulse limit: 0.863ns (Trpw)
+  Physical resource: kmd1/an1/SR
+  Logical resource: kmd1/an1/SR
+  Location pin: SLICE_X35Y27.SR
+  Clock network: kmd2/stabilized_button
+--------------------------------------------------------------------------------
+Slack: 318.274ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 320.000ns
+  High pulse: 160.000ns
+  High pulse limit: 0.863ns (Trpw)
+  Physical resource: kmd1/an1/SR
+  Logical resource: kmd1/an1/SR
+  Location pin: SLICE_X35Y27.SR
+  Clock network: kmd2/stabilized_button
+--------------------------------------------------------------------------------
+Slack: 318.274ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 320.000ns
+  Low pulse: 160.000ns
+  Low pulse limit: 0.863ns (Trpw)
+  Physical resource: kmd1/an1/SR
+  Logical resource: kmd1/an0/SR
+  Location pin: SLICE_X35Y27.SR
+  Clock network: kmd2/stabilized_button
+--------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Derived Constraints for TS_clk
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_clk                         |     20.000ns|      6.000ns|      0.314ns|            0|            0|          420|           67|
+| TS_CLKDV_OBUF                 |    320.000ns|      5.031ns|          N/A|            0|            0|           67|            0|
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    5.031|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 487 paths, 0 nets, and 170 connections
+
+Design statistics:
+   Minimum period:   6.000ns{1}   (Maximum frequency: 166.667MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Wed Oct 26 17:54:21 2016 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 163 MB
+
+
+
