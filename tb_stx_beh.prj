@@ -1,6 +1,5 @@
 verilog isim_temp "LEDdecoder.v"
-verilog isim_temp "ledDataFeeder.v"
-verilog isim_temp "anti-bounce.v"
+verilog isim_temp "ant-bounce_reset.v"
 verilog isim_temp "system.v"
 verilog isim_temp "tb.v"
 verilog isim_temp "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"
