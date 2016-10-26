@@ -5,12 +5,12 @@ WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
 WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
 This is a Lite version of ISim.
-WARNING: File "C:/Users/kmd17/Documents/GitHub/FPGACODE/system.v" Line 58.  For instance sys0/DCM_inst/, width 8 of formal port STATUS is not equal to width 1 of actual signal STATUS.
+WARNING: File "C:/Users/kmd17/Documents/GitHub/FPGACODE/system.v" Line 61.  For instance sys0/DCM_inst/, width 8 of formal port STATUS is not equal to width 1 of actual signal STATUS.
 Time resolution is 1 ps
 # onerror resume
 # wave add /
 # run 1000 ns
 Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-# run all
-Stopped at time : 43400 ns : File "C:/Users/kmd17/Documents/GitHub/FPGACODE/tb.v" Line 53
+ERROR: In process ledDataFeeder.vCont_16_0 
+ FATAL ERROR:ISim: This application has discovered an exceptional condition from which it cannot recover. Process will terminate. To search for possible resolutions to this issue, refer to the Xilinx answer database by going to http://www.xilinx.com/support/answers/index.htm and search with keywords 'ISim' and 'FATAL ERROR'. For technical support on this issue, please open a WebCase with this project attached at http://www.xilinx.com/support.
+INFO: Simulator is stopped.

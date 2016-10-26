@@ -2,9 +2,29 @@ Command line:
    tb_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  50832
+     -socket  50953
 
-Wed Oct 26 11:16:17 2016
+Wed Oct 26 12:00:56 2016
 
 
- Elaboration Time: 0.140625 sec
+ Elaboration Time: 0.078125 sec
+
+ Current Memory Usage: 1491.08 Meg
+
+ Total Signals          : 111
+ Total Nets             : 88
+ Total Signal Drivers   : 60
+ Total Blocks           : 13
+ Total Primitive Blocks : 10
+ Total Processes        : 152
+ Total Traceable Variables  : 208
+ Total Scalar Nets and Variables : 3466
+In process ledDataFeeder.vCont_16_0 
+ FATAL ERROR:ISim: This application has discovered an exceptional condition from which it cannot recover. Process will terminate. To search for possible resolutions to this issue, refer to the Xilinx answer database by going to http://www.xilinx.com/support/answers/index.htm and search with keywords 'ISim' and 'FATAL ERROR'. For technical support on this issue, please open a WebCase with this project attached at http://www.xilinx.com/support.
+
+ Total Simulation Time: 0.28125 sec
+
+ Current Memory Usage: 1544.13 Meg
+
+Wed Oct 26 12:01:03 2016
+

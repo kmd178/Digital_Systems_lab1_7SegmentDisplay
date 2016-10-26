@@ -2,12 +2,13 @@
 
 module tb;
 
-reg reset,clk,button;
+reg reset,clk,BTN2;
 wire a,b,c,d,e,f,g,dp,CLKDV;
 
 FourDigitLEDdriver sys0(
 	.reset(reset),
 	.clk(clk),
+	.BTN2(BTN2),
 	.an3(an3),
 	.an2(an2),
 	.an1(an1),
@@ -22,33 +23,33 @@ FourDigitLEDdriver sys0(
 	.dp(dp),
 	.CLKDV(CLKDV),
 	.stabilizedRESET(stabilizedRESET),
-	.button(button)
+	.stabilizedButton(stabilizedButton)
 );
 
 initial begin
 	clk=0;
-	reset = 0;
-	button=0;
+	reset = 1;
+	BTN2=0;
 	#100;
 					
-	#100 reset = 1;
-	#1000 button=0;
-	#10000 button=1;
-	#10000 button=0;
-	#100 button=1;
-	#100 button=0;
-	#100 button=1;
-	#100 button=0;
-	#100 button=1;
-	#100 button=0;
-	#100 button=1;
-	#100 button=0;
-	#10000 button=1;
-	#100 button=0;
-	#100 button=1;
-	#100 button=0;
-	#100 button=1;
-	#100 button=1;
+	#100 reset = 0;
+	#1000 BTN2=0;
+	#10000 BTN2=1;
+	#10000 BTN2=0;
+	#100 BTN2=1;
+	#100 BTN2=0;
+	#100 BTN2=1;
+	#100 BTN2=0;
+	#100 BTN2=1;
+	#100 BTN2=0;
+	#100 BTN2=1;
+	#100 BTN2=0;
+	#10000 BTN2=1;
+	#100 BTN2=0;
+	#100 BTN2=1;
+	#100 BTN2=0;
+	#100 BTN2=1;
+	#100 BTN2=1;
 	
 	#10000 $finish;	
 
