@@ -1,0 +1,87 @@
+﻿Revert "Part C , D are really close to eachother, just need to change 2 variables and its done."
+
+This reverts commit 3da8b1abe8ecfe139afa4bbaeaa07fbf55855a16.
+
+# Conflicts:
+#	_xmsgs/pn_parser.xmsgs
+#	fuse.log
+#	fuse.xmsgs
+#	isim.log
+#	isim/anti_bounce_isim_beh.exe.sim/work/m_00000000003349462936_4192018322.c
+#	isim/isim_usage_statistics.html
+#	isim/tb_isim_beh.exe.sim/ISimEngine-DesignHierarchy.dbg
+#	isim/tb_isim_beh.exe.sim/isimkernel.log
+#	isim/tb_isim_beh.exe.sim/netId.dat
+#	isim/tb_isim_beh.exe.sim/tb_isim_beh.exe
+#	isim/tb_isim_beh.exe.sim/tmp_save/_1
+#	isim/tb_isim_beh.exe.sim/unisims_ver/m_00000000001639448493_3829379307.didat
+#	isim/tb_isim_beh.exe.sim/unisims_ver/m_00000000002393387159_0973828799.didat
+#	isim/tb_isim_beh.exe.sim/unisims_ver/m_00000000002399568039_3574923728.didat
+#	isim/tb_isim_beh.exe.sim/unisims_ver/m_00000000002557334010_0635491122.didat
+#	isim/tb_isim_beh.exe.sim/unisims_ver/m_00000000002557334010_3100994011.didat
+#	isim/tb_isim_beh.exe.sim/work/m_00000000000866837254_2452564566.c
+#	isim/tb_isim_beh.exe.sim/work/m_00000000000866837254_2452564566.didat
+#	isim/tb_isim_beh.exe.sim/work/m_00000000000866837254_2452564566.nt64.obj
+#	isim/tb_isim_beh.exe.sim/work/m_00000000001039223709_2452564566.c
+#	isim/tb_isim_beh.exe.sim/work/m_00000000001486005871_0834505369.c
+#	isim/tb_isim_beh.exe.sim/work/m_00000000001500336377_3644722529.didat
+#	isim/tb_isim_beh.exe.sim/work/m_00000000001941728520_3671711236.c
+#	isim/tb_isim_beh.exe.sim/work/m_00000000002253808098_3671711236.c
+#	isim/tb_isim_beh.exe.sim/work/m_00000000003349462936_4192018322.didat
+#	isim/tb_isim_beh.exe.sim/work/m_00000000003953416142_0834505369.c
+#	isim/tb_isim_beh.exe.sim/work/m_00000000004134447467_2073120511.didat
+#	isim/tb_isim_beh.exe.sim/work/m_00000000004236913097_3671711236.c
+#	isim/tb_isim_beh.exe.sim/work/m_00000000004268203272_0834505369.c
+#	isim/tb_isim_beh.exe.sim/work/tb_isim_beh.exe_main.c
+#	isim/tb_isim_beh.exe.sim/work/tb_isim_beh.exe_main.nt64.obj
+#	isim/temp/@four@digit@l@e@ddriver.sdb
+#	isim/temp/@l@e@ddecoder.sdb
+#	isim/temp/anti_bounce.sdb
+#	isim/temp/anti_bounce_reset.sdb
+#	isim/temp/glbl.sdb
+#	isim/temp/led@data@feeder.sdb
+#	isim/temp/tb.sdb
+#	isim/work/@four@digit@l@e@ddriver.sdb
+#	isim/work/@l@e@ddecoder.sdb
+#	isim/work/anti_bounce.sdb
+#	isim/work/anti_bounce_reset.sdb
+#	isim/work/glbl.sdb
+#	isim/work/led@data@feeder.sdb
+#	isim/work/tb.sdb
+#	lab1.gise
+#	lab1.xise
+#	ledDataFeeder.v
+#	system.v
+#	tb.v
+#	tb_beh.prj
+#	tb_isim_beh.wdb
+#	tb_stx_beh.prj
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded.
+#   (use "git pull" to update your local branch)
+#
+# You are currently reverting commit 3da8b1a.
+#
+# Changes to be committed:
+#	renamed:    isim/tb_isim_beh.exe.sim/work/m_00000000003349462936_4192018322.c -> isim/tb_isim_beh.exe.sim/work/m_00000000000866837254_2452564566.c
+#	new file:   isim/tb_isim_beh.exe.sim/work/m_00000000000866837254_2452564566.didat
+#	new file:   isim/tb_isim_beh.exe.sim/work/m_00000000000866837254_2452564566.nt64.obj
+#	new file:   isim/tb_isim_beh.exe.sim/work/m_00000000001386955648_0931130636.c
+#	new file:   isim/tb_isim_beh.exe.sim/work/m_00000000001386955648_0931130636.didat
+#	new file:   isim/tb_isim_beh.exe.sim/work/m_00000000001386955648_0931130636.nt64.obj
+#	new file:   isim/tb_isim_beh.exe.sim/work/m_00000000003953416142_0834505369.didat
+#	new file:   isim/tb_isim_beh.exe.sim/work/m_00000000003953416142_0834505369.nt64.obj
+#	new file:   isim/tb_isim_beh.exe.sim/work/m_00000000004236913097_3671711236.didat
+#	new file:   isim/tb_isim_beh.exe.sim/work/m_00000000004236913097_3671711236.nt64.obj
+#	deleted:    isim/temp/anti_bounce.sdb
+#	deleted:    isim/work/@four@digit@l@e@ddriver.sdb
+#	deleted:    isim/work/@l@e@ddecoder.sdb
+#	deleted:    isim/work/anti_bounce.sdb
+#	deleted:    isim/work/glbl.sdb
+#	deleted:    isim/work/led@data@feeder.sdb
+#	deleted:    isim/work/tb.sdb
+#
+
