@@ -2,6 +2,7 @@
 module FourDigitLEDdriver(
 	input reset,
 	input clk,
+	input BTN2,
 	output an3,
 	output an2,
 	output an1,
@@ -15,15 +16,17 @@ module FourDigitLEDdriver(
 	output g,
 	output dp,
 	output CLKDV,
-	output stabilizedButton,
-	input button
+	output stabilizedRESET,
+	output stabilizedButton
 );
 wire [7:0] Led;
 wire [3:0] char;
-wire clk,reset,CLKDV;
-wire an0,an1,an2,an3;
-
 assign {a,b,c,d,e,f,g,dp}=Led;
+
+anti_bounce_reset kmd2(clk, reset, stabilizedRESET);
+anti_bounce kmd3(clk, reset , BTN2, stabilizedButton);
+ledDataFeeder kmd1(clk,stabilizedRESET,stabilizedButton,char,an0,an1,an2,an3);
+LEDdecoder kmd(char,Led);
 
    DCM #(
       .SIM_MODE("SAFE"),  // Simulation: "SAFE" vs. "FAST", see "Synthesis and Simulation Design Guide" for details
@@ -64,9 +67,6 @@ assign {a,b,c,d,e,f,g,dp}=Led;
       .RST(RST)        // DCM asynchronous reset input
    );
 
-//anti_bounce kmd2(clk, 1'b0 , reset, stabilizedRESET)
-anti_bounce kmd2(clk, reset , button, stabilizedButton);
-ledDataFeeder kmd1(clk,reset,char,an0,an1,an2,an3);
-LEDdecoder kmd(char,Led);
+
 
 endmodule
