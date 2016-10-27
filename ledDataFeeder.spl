@@ -1,0 +1,14 @@
+[Inputs]
+clk
+reset
+button
+[Outputs]
+an0
+an1
+an2
+an3
+=loadCharLED[3:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel ledDataFeeder
+

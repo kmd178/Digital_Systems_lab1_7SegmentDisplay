@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "C:/Users/kmd17/Desktop/FPGACODE_LAB1_7SegmentDisplay-FPGACODE_LAB1_PART_D/ant-bounce_reset.v";
+static const char *ng0 = "C:/Users/kmd17/Documents/GitHub/FPGACODE/ant-bounce_reset.v";
 static unsigned int ng1[] = {1U, 0U};
 static unsigned int ng2[] = {0U, 0U};
 static unsigned int ng3[] = {2U, 0U};
@@ -64,9 +64,9 @@ LAB5:    xsi_set_current_line(18, ng0);
     t6 = *((char **)t5);
     t7 = ((char*)((ng1)));
     memset(t8, 0, 8);
-    xsi_vlog_unsigned_add(t8, 7, t6, 7, t7, 7);
+    xsi_vlog_unsigned_add(t8, 20, t6, 20, t7, 20);
     t9 = (t0 + 1928);
-    xsi_vlogvar_wait_assign_value(t9, t8, 0, 0, 7, 0LL);
+    xsi_vlogvar_wait_assign_value(t9, t8, 0, 0, 20, 0LL);
     goto LAB2;
 
 }
@@ -114,7 +114,7 @@ LAB2:    xsi_set_current_line(21, ng0);
     t7 = *((unsigned int *)t5);
     t8 = *((unsigned int *)t6);
     t9 = (t7 | t8);
-    if (t9 != 127U)
+    if (t9 != 1048575U)
         goto LAB5;
 
 LAB4:    if (*((unsigned int *)t6) == 0)

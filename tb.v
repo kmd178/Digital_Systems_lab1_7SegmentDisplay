@@ -32,7 +32,7 @@ initial begin
 	clk=0;
 	reset = 1;
 	BTN2=0;
-	#1000;
+	#10000;
 					
 	#10000 reset = 0;
 	#1000 BTN2=0;
@@ -53,7 +53,7 @@ initial begin
 	#100 BTN2=1;
 	#100 BTN2=1;
 	
-	#1000000 $finish;	
+	#100000000 $finish;	
 
 end
 	

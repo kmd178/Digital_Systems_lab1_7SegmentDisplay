@@ -22,11 +22,7 @@ module FourDigitLEDdriver(
 wire [7:0] Led;
 wire [3:0] char;
 wire CLK0;
-assign {a,b,c,d,e,f,g,dp}=Led;
-
-
-
-
+assign {a,b,c,d,e,f,g,dp}=Led; //Dividing the 8 bit decoded output to the assigned segment registers that control the LED character displayed
 
 anti_bounce_reset kmd2(clk, reset, stabilizedRESET);
 anti_bounce kmd3(clk, reset , BTN2, stabilizedButton);

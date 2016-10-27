@@ -1,0 +1,3 @@
+vhdtdtfi -lib work C:/Users/kmd17/Documents/GitHub/FPGACODE/ledDataFeeder.v -lang verilog -prj lab1 -o ledDataFeeder.spl -module ledDataFeeder -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3 ledDataFeeder.spl C:/Users/kmd17/Documents/GitHub/FPGACODE/ledDataFeeder.sym 
+vhdtdtfi -lang verilog -prj lab1 -o C:/Users/kmd17/Documents/GitHub/FPGACODE/ledDataFeeder.tfi -lib work C:/Users/kmd17/Documents/GitHub/FPGACODE//ledDataFeeder.v -module ledDataFeeder -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

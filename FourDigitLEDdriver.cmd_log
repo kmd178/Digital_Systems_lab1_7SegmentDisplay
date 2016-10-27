@@ -63,3 +63,9 @@ map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o FourDigi
 par -w -intstyle ise -ol high -t 1 FourDigitLEDdriver_map.ncd FourDigitLEDdriver.ncd FourDigitLEDdriver.pcf 
 trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml FourDigitLEDdriver.twx FourDigitLEDdriver.ncd -o FourDigitLEDdriver.twr FourDigitLEDdriver.pcf -ucf system.ucf 
 bitgen -intstyle ise -f FourDigitLEDdriver.ut FourDigitLEDdriver.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc system.ucf -p xc3s200-ft256-4 FourDigitLEDdriver.ngc FourDigitLEDdriver.ngd  
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o FourDigitLEDdriver_map.ncd FourDigitLEDdriver.ngd FourDigitLEDdriver.pcf 
+par -w -intstyle ise -ol high -t 1 FourDigitLEDdriver_map.ncd FourDigitLEDdriver.ncd FourDigitLEDdriver.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml FourDigitLEDdriver.twx FourDigitLEDdriver.ncd -o FourDigitLEDdriver.twr FourDigitLEDdriver.pcf -ucf system.ucf 
+vhdtdtfi -lib work C:/Users/kmd17/Documents/GitHub/FPGACODE/system.v -lang verilog -prj lab1 -o FourDigitLEDdriver.spl -module FourDigitLEDdriver -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3 FourDigitLEDdriver.spl C:/Users/kmd17/Documents/GitHub/FPGACODE/FourDigitLEDdriver.sym 

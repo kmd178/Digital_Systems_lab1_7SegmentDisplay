@@ -1,17 +1,17 @@
-Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "C:/Users/kmd17/Desktop/FPGACODE_LAB1_7SegmentDisplay-FPGACODE_LAB1_PART_D/tb_isim_beh.exe" -prj "C:/Users/kmd17/Desktop/FPGACODE_LAB1_7SegmentDisplay-FPGACODE_LAB1_PART_D/tb_beh.prj" "work.tb" "work.glbl" 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o C:/Users/kmd17/Documents/GitHub/FPGACODE/tb_isim_beh.exe -prj C:/Users/kmd17/Documents/GitHub/FPGACODE/tb_beh.prj work.tb work.glbl 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
-Analyzing Verilog file "C:/Users/kmd17/Desktop/FPGACODE_LAB1_7SegmentDisplay-FPGACODE_LAB1_PART_D/LEDdecoder.v" into library work
-Analyzing Verilog file "C:/Users/kmd17/Desktop/FPGACODE_LAB1_7SegmentDisplay-FPGACODE_LAB1_PART_D/ledDataFeeder.v" into library work
-Analyzing Verilog file "C:/Users/kmd17/Desktop/FPGACODE_LAB1_7SegmentDisplay-FPGACODE_LAB1_PART_D/anti-bounce.v" into library work
-Analyzing Verilog file "C:/Users/kmd17/Desktop/FPGACODE_LAB1_7SegmentDisplay-FPGACODE_LAB1_PART_D/ant-bounce_reset.v" into library work
-Analyzing Verilog file "C:/Users/kmd17/Desktop/FPGACODE_LAB1_7SegmentDisplay-FPGACODE_LAB1_PART_D/system.v" into library work
-Analyzing Verilog file "C:/Users/kmd17/Desktop/FPGACODE_LAB1_7SegmentDisplay-FPGACODE_LAB1_PART_D/tb.v" into library work
+Analyzing Verilog file "C:/Users/kmd17/Documents/GitHub/FPGACODE/LEDdecoder.v" into library work
+Analyzing Verilog file "C:/Users/kmd17/Documents/GitHub/FPGACODE/ledDataFeeder.v" into library work
+Analyzing Verilog file "C:/Users/kmd17/Documents/GitHub/FPGACODE/anti-bounce.v" into library work
+Analyzing Verilog file "C:/Users/kmd17/Documents/GitHub/FPGACODE/ant-bounce_reset.v" into library work
+Analyzing Verilog file "C:/Users/kmd17/Documents/GitHub/FPGACODE/system.v" into library work
+Analyzing Verilog file "C:/Users/kmd17/Documents/GitHub/FPGACODE/tb.v" into library work
 Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
-WARNING:HDLCompiler:1016 - "C:/Users/kmd17/Desktop/FPGACODE_LAB1_7SegmentDisplay-FPGACODE_LAB1_PART_D/system.v" Line 36: Port CLK180 is not connected to this instance
+WARNING:HDLCompiler:1016 - "C:/Users/kmd17/Documents/GitHub/FPGACODE/system.v" Line 36: Port CLK180 is not connected to this instance
 Completed static elaboration
 Compiling module anti_bounce_reset
 Compiling module anti_bounce
@@ -26,9 +26,9 @@ Compiling module FourDigitLEDdriver
 Compiling module tb
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 1 sub-compilation(s) to finish...
+Waiting for 2 sub-compilation(s) to finish...
 WARNING:Simulator - Unable to copy libPortabilityNOSH.dll to the simulation executable directory: boost::filesystem::copy_file: The system cannot find the path specified, "isim\tb_isim_beh.exe.sim\libPortability.dll".
 Compiled 12 Verilog Units
-Built simulation executable C:/Users/kmd17/Desktop/FPGACODE_LAB1_7SegmentDisplay-FPGACODE_LAB1_PART_D/tb_isim_beh.exe
-Fuse Memory Usage: 33088 KB
-Fuse CPU Usage: 1093 ms
+Built simulation executable C:/Users/kmd17/Documents/GitHub/FPGACODE/tb_isim_beh.exe
+Fuse Memory Usage: 31808 KB
+Fuse CPU Usage: 390 ms

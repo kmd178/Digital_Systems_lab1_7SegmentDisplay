@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-SURFACEKMD::  Wed Oct 26 17:54:10 2016
+DESKTOPKMD::  Thu Oct 27 21:52:51 2016
 
 par -w -intstyle ise -ol high -t 1 FourDigitLEDdriver_map.ncd
 FourDigitLEDdriver.ncd FourDigitLEDdriver.pcf 
@@ -35,55 +35,55 @@ Placer effort level (-pl):    High
 Placer cost table entry (-t): 1
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 2 secs 
-Finished initial Timing Analysis.  REAL time: 2 secs 
+Starting initial Timing Analysis.  REAL time: 0 secs 
+Finished initial Timing Analysis.  REAL time: 0 secs 
 
 
 Starting Placer
-Total REAL time at the beginning of Placer: 2 secs 
-Total CPU  time at the beginning of Placer: 1 secs 
+Total REAL time at the beginning of Placer: 0 secs 
+Total CPU  time at the beginning of Placer: 0 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:70b33861) REAL time: 2 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:70b33861) REAL time: 1 secs 
 
 Phase 2.7  Design Feasibility Check
 INFO:Place:834 - Only a subset of IOs are locked. Out of 18 IOs, 15 are locked and 3 are not locked. If you would like
    to print the names of these IOs, please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
-Phase 2.7  Design Feasibility Check (Checksum:70b33861) REAL time: 2 secs 
+Phase 2.7  Design Feasibility Check (Checksum:70b33861) REAL time: 1 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:70b33861) REAL time: 2 secs 
+Phase 3.31  Local Placement Optimization (Checksum:70b33861) REAL time: 1 secs 
 
 Phase 4.2  Initial Clock and IO Placement
 ........
-Phase 4.2  Initial Clock and IO Placement (Checksum:79cbecd1) REAL time: 2 secs 
+Phase 4.2  Initial Clock and IO Placement (Checksum:79cbecd1) REAL time: 1 secs 
 
 Phase 5.36  Local Placement Optimization
-Phase 5.36  Local Placement Optimization (Checksum:79cbecd1) REAL time: 2 secs 
+Phase 5.36  Local Placement Optimization (Checksum:79cbecd1) REAL time: 1 secs 
 
 Phase 6.3  Local Placement Optimization
 ........
-Phase 6.3  Local Placement Optimization (Checksum:c8801b09) REAL time: 2 secs 
+Phase 6.3  Local Placement Optimization (Checksum:c8801b09) REAL time: 1 secs 
 
 Phase 7.5  Local Placement Optimization
-Phase 7.5  Local Placement Optimization (Checksum:c8801b09) REAL time: 2 secs 
+Phase 7.5  Local Placement Optimization (Checksum:c8801b09) REAL time: 1 secs 
 
 Phase 8.8  Global Placement
 ..
 ..
-Phase 8.8  Global Placement (Checksum:c6290b8c) REAL time: 4 secs 
+Phase 8.8  Global Placement (Checksum:c6290b8c) REAL time: 1 secs 
 
 Phase 9.5  Local Placement Optimization
-Phase 9.5  Local Placement Optimization (Checksum:c6290b8c) REAL time: 4 secs 
+Phase 9.5  Local Placement Optimization (Checksum:c6290b8c) REAL time: 1 secs 
 
 Phase 10.18  Placement Optimization
-Phase 10.18  Placement Optimization (Checksum:be2c40f7) REAL time: 4 secs 
+Phase 10.18  Placement Optimization (Checksum:be2c40f7) REAL time: 1 secs 
 
 Phase 11.5  Local Placement Optimization
-Phase 11.5  Local Placement Optimization (Checksum:be2c40f7) REAL time: 4 secs 
+Phase 11.5  Local Placement Optimization (Checksum:be2c40f7) REAL time: 1 secs 
 
-Total REAL time to Placer completion: 4 secs 
-Total CPU  time to Placer completion: 3 secs 
+Total REAL time to Placer completion: 1 secs 
+Total CPU  time to Placer completion: 1 secs 
 Writing design to file FourDigitLEDdriver.ncd
 
 
@@ -91,23 +91,23 @@ Writing design to file FourDigitLEDdriver.ncd
 Starting Router
 
 
-Phase  1  : 357 unrouted;      REAL time: 4 secs 
+Phase  1  : 357 unrouted;      REAL time: 1 secs 
 
-Phase  2  : 320 unrouted;      REAL time: 4 secs 
+Phase  2  : 320 unrouted;      REAL time: 2 secs 
 
-Phase  3  : 97 unrouted;      REAL time: 4 secs 
+Phase  3  : 97 unrouted;      REAL time: 2 secs 
 
-Phase  4  : 97 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 4 secs 
+Phase  4  : 97 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 2 secs 
 
-Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 4 secs 
+Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 2 secs 
 
 Updating file: FourDigitLEDdriver.ncd with current fully routed design.
 
-Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 4 secs 
+Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 2 secs 
 
-Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 5 secs 
+Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 2 secs 
 
-Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 5 secs 
+Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 2 secs 
 WARNING:Route:455 - CLK Net:kmd3/check may have excessive skew because 
       3 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
 WARNING:Route:455 - CLK Net:kmd2/check may have excessive skew because 
@@ -119,8 +119,8 @@ WARNING:Route:455 - CLK Net:CLKDV_OBUF may have excessive skew because
 WARNING:Route:455 - CLK Net:kmd2/reset_initialize may have excessive skew because 
       1 CLK pins and 3 NON_CLK pins failed to route using a CLK template.
 
-Total REAL time to Router completion: 5 secs 
-Total CPU time to Router completion: 4 secs 
+Total REAL time to Router completion: 2 secs 
+Total CPU time to Router completion: 1 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -200,10 +200,10 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 5 secs 
-Total CPU time to PAR completion: 5 secs 
+Total REAL time to PAR completion: 2 secs 
+Total CPU time to PAR completion: 2 secs 
 
-Peak Memory Usage:  328 MB
+Peak Memory Usage:  335 MB
 
 Placement: Completed - No errors found.
 Routing: Completed - No errors found.

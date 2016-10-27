@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "C:/Users/kmd17/Desktop/FPGACODE_LAB1_7SegmentDisplay-FPGACODE_LAB1_PART_D/tb.v";
+static const char *ng0 = "C:/Users/kmd17/Documents/GitHub/FPGACODE/tb.v";
 static int ng1[] = {0, 0};
 static int ng2[] = {1, 0};
 
@@ -57,7 +57,7 @@ LAB4:    xsi_set_current_line(32, ng0);
     xsi_vlogvar_assign_value(t3, t2, 0, 0, 1);
     xsi_set_current_line(35, ng0);
     t2 = (t0 + 4736);
-    xsi_process_wait(t2, 1000000LL);
+    xsi_process_wait(t2, 10000000LL);
     *((char **)t1) = &&LAB5;
 
 LAB1:    return;
@@ -243,7 +243,7 @@ LAB23:    xsi_set_current_line(54, ng0);
     xsi_vlogvar_assign_value(t4, t3, 0, 0, 1);
     xsi_set_current_line(56, ng0);
     t2 = (t0 + 4736);
-    xsi_process_wait(t2, 1000000000LL);
+    xsi_process_wait(t2, 100000000000LL);
     *((char **)t1) = &&LAB24;
     goto LAB1;
 

@@ -24,7 +24,7 @@ always @(posedge reset)
 		message[7] <= 4'b1101;   //d
 	end
 
-reg [21:0] signal_every_second; //Depending on the FPGA system used. Normally for 50mhz clock divided by 16 on the dcm(period=(2e-8)/16) and for a 1340ms distance between posedge we need 2^22cycles
+reg [21:0] signal_every_second; //Depending on the FPGA system used. Normally for 50mhz clock divided by 16 on the dcm(period=(2e-8)/16) and for a 1340ms distance between posedges we need 2^22cycles
 always @(posedge clk, posedge reset)	
 	begin 
 		if (reset) 
@@ -35,27 +35,24 @@ always @(posedge clk, posedge reset)
 	
 wire check_signal_every_second=	&signal_every_second;
 	
-always @(posedge button, posedge reset)  //%%%%%%%%button
-	begin
+//////////////"check_signal_every_second" for time triggering
+always @(posedge button, posedge reset)  //Depending if i want button as a trigger or the 1second timer above, i can chance  "button" to "check_signal_every_second"
 		if (reset) 
 			MemoryCounter <= 3'b0 ;
 		else
 			MemoryCounter<= MemoryCounter+3'b001 ; 
 	end
-
+//%%%%%%%%MemoryCounter= MemoryCounter+3'b100 ; //in case i would like the characters displayed sequencially (not rotationally)
 
 wire [2:0]MemoryCounter1= MemoryCounter + 1;
 wire [2:0]MemoryCounter2= MemoryCounter + 2;
 wire [2:0]MemoryCounter3= MemoryCounter + 3;
-//%%%%%%%%MemoryCounter= MemoryCounter+3'b100 ;
 
+
+///used for controlling the states where segments and anodes are assigned
 always @(posedge clk, posedge reset)
 	begin
 		if (reset) begin
-//				an0 <= 1;
-//				an1 <= 1;
-//				an2 <= 1;
-//				an3 <= 1;
 		  SystemCounter <= 4'b0 ;
 		end
 		else begin
@@ -65,7 +62,7 @@ always @(posedge clk, posedge reset)
 	
 
 
-
+///feeding data from memory to segments to be activated
 always @(posedge clk)
 	begin 
 				case(SystemCounter) 
@@ -89,6 +86,8 @@ always @(posedge clk)
 //			end
 		end
 
+
+///Activating the corresponding anode and its segments that are initialized above
 always @(posedge clk,posedge reset)
 	begin 
 		if (reset)

@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "C:/Users/kmd17/Desktop/FPGACODE_LAB1_7SegmentDisplay-FPGACODE_LAB1_PART_D/tb_isim_beh.exe" -prj "C:/Users/kmd17/Desktop/FPGACODE_LAB1_7SegmentDisplay-FPGACODE_LAB1_PART_D/tb_beh.prj" "work.tb" "work.glbl" 
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "C:/Users/kmd17/Documents/GitHub/FPGACODE/tb_isim_beh.exe" -prj "C:/Users/kmd17/Documents/GitHub/FPGACODE/tb_beh.prj" "work.tb" "work.glbl" 

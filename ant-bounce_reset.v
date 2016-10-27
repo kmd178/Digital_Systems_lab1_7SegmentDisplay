@@ -5,10 +5,9 @@ module anti_bounce_reset(
 		input button,
 		output reg stabilized_button
 );
-						//Assuming the button is stabilized when pressing the reset button on the device, user doesnt press simultaneously both buttons
-						// even if the button bounces, when i have reset pressed nothing works so i dont really care.
-		reg [19:0] clk_count=1'b0; //Depending on the FPGA system used. Normally for 50mhz clock (period=2e-8) and for a 20ms stabilizing time 20bits gives 2^20cycles that give 0.020ms
-		wire check; //ClockDividing using AND: When clk_hits 15 clock periods CHECK will give me a posedge
+
+		reg [19:0] clk_count=1'b0; //(Depending on the FPGA system used.) For 50mhz clock (period=2e-8) and for a 20ms delay, 20bits give the required 2^20cycles.
+		wire check; //ClockDividing using AND: When clk_hits 2^20 clock periods CHECK will give me a posedge
 		reg reset_initialize=1'b1;
 		reg saved_button_state;
 		reg [1:0] current_state;
@@ -19,7 +18,7 @@ module anti_bounce_reset(
 			end 
 			
 		assign check = &clk_count;  
-		//ClockDividing using AND: When clk_hits 1048576 Cycles=(19b'1111111111111111111111) clock periods CHECK will give me a posedge
+		//ClockDividing using AND: When clk_hits 1048576 Cycles=(20b'1111111111111111111111) clock periods CHECK will give me a posedge
 		//if the clock of the FPGA is 10mhz then 1048576 cycles equal a worst case of a 4*0.1048576seconds delay, 
 		//making it necessary to be pressing the button for that much time to make an effect
 		
