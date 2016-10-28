@@ -6,7 +6,7 @@ module LEDdecoder(
 );
 always @(*)
 	case(char)
-	  0: LED = 8'b00000011; //0
+	  0: LED = 8'b00000011; //0//
 	  1: LED = 8'b10011111; //1
 	  2: LED = 8'b00100101; //2
 	  3: LED = 8'b00001101; //3

@@ -146,7 +146,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1477596012" xil_pn:in_ck="3613252810689829265" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1477596012">
+    <transform xil_pn:end_ts="1477655844" xil_pn:in_ck="3613252810689829265" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1477655844">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="LEDdecoder.v"/>
@@ -243,7 +243,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name=".lso"/>
       <outfile xil_pn:name="FourDigitLEDdriver.lso"/>
@@ -267,6 +269,7 @@
     <transform xil_pn:end_ts="1477594365" xil_pn:in_ck="-371513035064690192" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="3949459327277639507" xil_pn:start_ts="1477594360">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="FourDigitLEDdriver.bld"/>
       <outfile xil_pn:name="FourDigitLEDdriver.ngd"/>
       <outfile xil_pn:name="FourDigitLEDdriver_ngdbuild.xrpt"/>
@@ -277,6 +280,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="FourDigitLEDdriver.pcf"/>
       <outfile xil_pn:name="FourDigitLEDdriver_map.map"/>
       <outfile xil_pn:name="FourDigitLEDdriver_map.mrp"/>
@@ -291,6 +295,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="FourDigitLEDdriver.ncd"/>
       <outfile xil_pn:name="FourDigitLEDdriver.pad"/>
       <outfile xil_pn:name="FourDigitLEDdriver.par"/>
@@ -307,6 +312,7 @@
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
@@ -330,6 +336,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="InputRemoved"/>
@@ -339,6 +346,7 @@
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
@@ -348,6 +356,7 @@
     <transform xil_pn:end_ts="1477594377" xil_pn:in_ck="4566045364636207530" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1477594374">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="FourDigitLEDdriver.twr"/>
       <outfile xil_pn:name="FourDigitLEDdriver.twx"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
