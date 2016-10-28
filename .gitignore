@@ -1,7 +1,8 @@
-* 
+*
+*.*
+*/*
 !*.v 
 !*.bit
 !*.ucf
 !README.md 
 !.gitignore
-*.xmsgs

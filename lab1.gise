@@ -75,6 +75,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="fourdigitleddriver.bgn" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BIT" xil_pn:name="fourdigitleddriver.bit" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_DRC" xil_pn:name="fourdigitleddriver.drc" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
     <file xil_pn:fileType="FILE_SPL" xil_pn:name="ledDataFeeder.spl"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="ledDataFeeder.sym" xil_pn:origination="imported"/>
@@ -144,7 +145,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1477657161" xil_pn:in_ck="3613252810689829265" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1477657161">
+    <transform xil_pn:end_ts="1477657324" xil_pn:in_ck="3613252810689829265" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1477657324">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="LEDdecoder.v"/>
@@ -171,6 +172,10 @@
     <transform xil_pn:end_ts="1477657166" xil_pn:in_ck="3613252810689829265" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1477657166">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="LEDdecoder.v"/>
       <outfile xil_pn:name="adder8.v"/>
       <outfile xil_pn:name="ant-bounce_reset.v"/>
@@ -183,6 +188,9 @@
     <transform xil_pn:end_ts="1477657173" xil_pn:in_ck="3613252810689829265" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-4281268360157342026" xil_pn:start_ts="1477657166">
       <status xil_pn:value="FailedRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="InputChanged"/>
     </transform>
     <transform xil_pn:end_ts="1477656866" xil_pn:in_ck="-250511652977911194" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="3731856249923486521" xil_pn:start_ts="1477656866">
       <status xil_pn:value="AbortedRun"/>
