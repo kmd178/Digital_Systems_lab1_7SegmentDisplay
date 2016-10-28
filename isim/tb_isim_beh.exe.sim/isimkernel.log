@@ -8,3 +8,22 @@ Fri Oct 28 15:14:29 2016
 
 
  Elaboration Time: 0.34375 sec
+
+ Current Memory Usage: 1338.49 Meg
+
+ Total Signals          : 100
+ Total Nets             : 96
+ Total Signal Drivers   : 64
+ Total Blocks           : 13
+ Total Primitive Blocks : 10
+ Total Processes        : 150
+ Total Traceable Variables  : 208
+ Total Scalar Nets and Variables : 3517
+Total Line Count : 1019
+
+ Total Simulation Time: 0.390625 sec
+
+ Current Memory Usage: 709.308 Meg
+
+Fri Oct 28 15:19:42 2016
+

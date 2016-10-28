@@ -24,7 +24,7 @@ always @(posedge reset)
 		message[7] <= 4'b1101;   //d
 	end
 
-reg [21:0] signal_every_second; //Depending on the FPGA system used. Normally for 50mhz clock divided by 16 on the dcm(period=(2e-8)/16) and for a 1340ms distance between posedges we need 2^22cycles
+reg [21:0] signal_every_second; ////Depending on the FPGA system used. Normally for 50mhz clock divided by 16 on the dcm(period=(2e-8)/16) and for a 1340ms distance between posedges we need 2^22cycles
 always @(posedge clk, posedge reset)	
 	begin 
 		if (reset) 
