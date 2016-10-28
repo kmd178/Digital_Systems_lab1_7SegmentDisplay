@@ -19,7 +19,7 @@ module anti_bounce(
 		assign check = &clk_count;  
 		//ClockDividing using AND: When clk_hits 1048576 Cycles=(20b'1111111111111111111111) clock periods CHECK will give me a posedge
 		//if the clock of the FPGA is 10mhz then 1048576 cycles equal a worst case of a 4*0.1048576seconds delay, 
-		//making it necessary to be pressing the button for that much time to make an effect
+		//making it necessary to be pressing the button for that much time to make an effect////
 		
 		always @(posedge check, posedge reset) 
 			begin

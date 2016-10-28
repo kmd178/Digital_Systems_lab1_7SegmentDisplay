@@ -14,10 +14,10 @@ reg [2:0] MemoryCounter=3'b0;
 
 always @(posedge reset) 
 	begin 
-		message[0] <= 4'b0001;   //1
+		message[0] <= 4'b0001;   //1//
 		message[1] <= 4'b0100;   //4//
-		message[2] <= 4'b0011;   //3
-		message[3] <= 4'b0101;   //5
+		message[2] <= 4'b0011;   //3//
+		message[3] <= 4'b0101;   //5//
 		message[4] <= 4'b1010;   //a
 		message[5] <= 4'b1011;   //b
 		message[6] <= 4'b1100;   //C
