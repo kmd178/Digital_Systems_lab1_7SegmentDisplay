@@ -1,8 +1,6 @@
-+* 
-+!*/ 
-+!*.v 
-+!README.md 
-+!.gitignore  
-
-
-
+* 
+!*.v 
+!*.bit
+!*.ucf
+!README.md 
+!.gitignore

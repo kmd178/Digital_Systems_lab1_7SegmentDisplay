@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "C:/Users/kmd17/Documents/GitHub/FPGACODE/system.v";
+static const char *ng0 = "C:/Users/kmd17/Documents/GitHub/FPGACODE_LAB1_7SegmentDisplay/system.v";
 
 
 

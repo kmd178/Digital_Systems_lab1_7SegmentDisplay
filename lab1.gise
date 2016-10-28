@@ -62,9 +62,7 @@
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="FourDigitLEDdriver_summary.xml"/>
     <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="FourDigitLEDdriver_usage.xml"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="FourDigitLEDdriver_xst.xrpt"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="LEDdecoder_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="LEDdecoder_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="LEDdecoder_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="LEDdecoder_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/bitgen.xmsgs"/>
@@ -129,7 +127,9 @@
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="system_summary.xml"/>
     <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="system_usage.xml"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="system_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="tb_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="tb_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="tb_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="tb_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="usage_statistics_webtalk.html"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="webtalk.log"/>
@@ -148,7 +148,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1477656059" xil_pn:in_ck="3613252810689829265" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1477656059">
+    <transform xil_pn:end_ts="1477656859" xil_pn:in_ck="3613252810689829265" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1477656859">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="LEDdecoder.v"/>
@@ -160,11 +160,11 @@
       <outfile xil_pn:name="system.v"/>
       <outfile xil_pn:name="tb.v"/>
     </transform>
-    <transform xil_pn:end_ts="1477656074" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="1081365510001570018" xil_pn:start_ts="1477656074">
+    <transform xil_pn:end_ts="1477656859" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-7128511773193751507" xil_pn:start_ts="1477656859">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1477656074" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="3453647372100105370" xil_pn:start_ts="1477656074">
+    <transform xil_pn:end_ts="1477656859" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="1315538588008459749" xil_pn:start_ts="1477656859">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -172,7 +172,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1477656074" xil_pn:in_ck="3613252810689829265" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1477656074">
+    <transform xil_pn:end_ts="1477656859" xil_pn:in_ck="3613252810689829265" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1477656859">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="LEDdecoder.v"/>
@@ -184,22 +184,22 @@
       <outfile xil_pn:name="system.v"/>
       <outfile xil_pn:name="tb.v"/>
     </transform>
-    <transform xil_pn:end_ts="1477656079" xil_pn:in_ck="3613252810689829265" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="4240958170983457536" xil_pn:start_ts="1477656074">
+    <transform xil_pn:end_ts="1477656866" xil_pn:in_ck="3613252810689829265" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-4281268360157342026" xil_pn:start_ts="1477656859">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="LEDdecoder_beh.prj"/>
-      <outfile xil_pn:name="LEDdecoder_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="tb_beh.prj"/>
+      <outfile xil_pn:name="tb_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1477656079" xil_pn:in_ck="-250511652977911194" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-7980442276218601565" xil_pn:start_ts="1477656079">
+    <transform xil_pn:end_ts="1477656866" xil_pn:in_ck="-250511652977911194" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="3731856249923486521" xil_pn:start_ts="1477656866">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="LEDdecoder_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="tb_isim_beh.wdb"/>
     </transform>
     <transform xil_pn:end_ts="1477491086" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1477491086">
       <status xil_pn:value="SuccessfullyRun"/>
