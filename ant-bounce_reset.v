@@ -29,7 +29,7 @@ module anti_bounce_reset(
 						current_state<=2'b00;
 						saved_button_state<=1'b0;
 						stabilized_button<=1'b0; 
-						reset_initialize<=1'b0;
+						reset_initialize<=1'b0; 
 					end
 				else 
 					begin

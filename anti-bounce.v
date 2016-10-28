@@ -27,7 +27,9 @@ module anti_bounce(
 						begin 
 						current_state<=2'b00;
 						saved_button_state<=button;
-						stabilized_button<=button;
+						stabilized_button<=1'b0;  //A different module is utilized for Buttons than the Reset button  
+						//itself in order for the system to regain partial functionality in the a case of a shortcircuited o
+						//r stuck button,  the anti_bounce module will effectively nulify the malfunctioning button's effect when the reset button is pressed.
 						end
 				else 
 					begin

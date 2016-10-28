@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "C:/Users/kmd17/Documents/GitHub/FPGACODE_LAB1_7SegmentDisplay/ledDataFeeder.v";
+static const char *ng0 = "C:/Users/kmd17/Documents/GitHub/FPGACODE/ledDataFeeder.v";
 static unsigned int ng1[] = {1U, 0U};
 static int ng2[] = {0, 0};
 static unsigned int ng3[] = {4U, 0U};
